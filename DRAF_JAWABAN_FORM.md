@@ -369,12 +369,53 @@ PROYEK 3: ResearchFlow-AI (Platform Riset AI Otonom & Sintesis Dokumen Terjadwal
 - Relevansi Tugas MSI: Sangat relevan dengan A4 (analisis dokumen & video menjadi executive briefing ber-sitasi fakta), A1 (grounding sumber KB ketat), dan A6 (penjadwalan background task & webhook notifikasi).
 ```
 
-#### C4 — Ringkasan Keunggulan Portofolio
-**Pertanyaan:** Dari proyek-proyek yang Anda cantumkan di atas, apa kompetensi unik atau pendekatan terbaik yang Anda terapkan dan relevan untuk MSI Group?*  
+#### C2 — Keunggulan Proyek dan Bukti Hasil
+**Pertanyaan:** Jelaskan keunggulan solusi dibanding cara lama/alat lain; tunjukkan bukti terukur atau contoh hasil yang dapat diperiksa; sebutkan yang belum diukur.*  
 **Jawaban untuk di-copy-paste:**
 ```text
-Kompetensi unik saya terletak pada integrasi menyeluruh antara "Rekayasa Otomasi yang Pragmatis" dan "Prinsip Human-in-the-Loop yang Terukur":
-1. Kepatuhan Sistem & Pencegahan Risiko: Dalam setiap solusi AI yang saya bangun (seperti terlihat pada studi kasus A1, A3, dan A6), AI tidak pernah dibiarkan mengeksekusi tindakan berisiko tinggi tanpa persetujuan manusia. Mekanisme deduplikasi, validasi batas nilai, dan fallback retry selalu diintegrasikan di tingkat arsitektur dasar.
-2. Efisiensi Berorientasi Dampak Nyata: Saya selalu memfokuskan otomasi pada titik friksi terbesar (bottleneck berulang) yang secara langsung memangkas waktu kerja dan menekan tingkat eror, bukan sekadar menerapkan AI demi tren teknologi.
-3. Keterlacakan & Transparansi Data (Auditability): Setiap keluaran sistem selalu dilengkapi jejak audit (audit trail), pemisahan tegas antara fakta sumber vs estimasi, dan kemudahan bagi staf operasional non-teknis untuk mengawasi sistem.
+1. KEUNGGULAN DIBANDING CARA LAMA / ALAT LAIN:
+- P01 (BizAssist-AI): Jauh lebih aman dan terkendali dibanding memanggil endpoint LLM langsung dari browser klien. Kunci API tersimpan di backend proxy FastAPI, input dibatasi 2.000 karakter, dan jawaban strictly dibatasi pada dokumen basis pengetahuan tanpa halusinasi harga/stok.
+- P02 (catat-ai): Memangkas pengisian formulir akuntansi manual berlapis menjadi input teks percakapan natural, rekaman suara, atau foto struk belanja, di mana satu kalimat kasbon otomatis terurai menjadi nominal piutang dan pembayaran sebagian.
+- P03 (ResearchFlow-AI): Menggantikan riset manual puluhan tab browser dengan otomasi pipeline end-to-end. Keunggulan mutlak ada pada validasi sitasi inline di sisi server (zero false citations), di mana setiap klaim dicek kecocokannya dengan teks sumber sebelum disintesis, serta berjalan lokal tanpa biaya database vektor cloud.
+
+2. BUKTI TERUKUR & CONTOH HASIL YANG DAPAT DIPERIKSA:
+- P01: Suite pengujian otomatis pytest (test_api.py, test_security.py, test_frontend.py) dan tangkapan layar respons chat ber-sitasi di repo GitHub.
+- P02: Aplikasi web live di Vercel, endpoint health check API (/health), skema database terstruktur (schema.sql), serta screenshot dashboard analitik.
+- P03: Repositori publik dengan arsitektur modular, container Docker siap jalan, penanganan jadwal multi-task anti-tumpang-tindih (max_instances=1), dan integrasi Webhook Discord real-time.
+
+3. YANG BELUM DIUKUR SECARA KUANTITATIF (PENGAKUAN JUJUR):
+- P01: Penghematan jam kerja riil staf CS pada skala operasional UMKM komersial jangka panjang.
+- P02: Akurasi pemindaian OCR multimodal pada ribuan lembar struk tulisan tangan yang sangat buram/rusak di lapangan.
+- P03: Utilisasi memori dan kecepatan retrieval vektor ketika corpus dokumen lokal mencapai ratusan ribu halaman teks.
+```
+
+---
+
+#### C3 — Tautan Demo dan Screenshot Proyek Terdahulu
+**Pertanyaan:** Tautan demo, repositori, screenshot, atau video untuk proyek C1.*  
+**Jawaban untuk di-copy-paste:**
+```text
+1. Proyek 1 — BizAssist-AI:
+- Repositori GitHub: https://github.com/azharzuhro12/BizAssist-AI
+- Screenshot Antarmuka & Uji: https://github.com/azharzuhro12/BizAssist-AI/tree/main/docs/screenshots
+
+2. Proyek 2 — catat-ai:
+- Live Web Application: https://catat-ai-azhars-projects-da34b643.vercel.app
+- Backend API Health: https://catat-ai-api-azhars-projects-da34b643.vercel.app/health
+- Repositori & Dokumentasi Skema: https://github.com/azharzuhro12/catat-ai
+
+3. Proyek 3 — ResearchFlow-AI:
+- Repositori GitHub & Panduan: https://github.com/azharzuhro12/ResearchFlow-AI
+- Arsitektur Pipeline & Docker: https://github.com/azharzuhro12/ResearchFlow-AI#arsitektur
+
+(Seluruh repositori dan tautan di atas bersifat publik, dapat diakses langsung oleh tim penilai tanpa login, dan tidak mengandung data rahasia maupun kredensial produksi).
+```
+
+---
+
+#### C4 — Pernyataan Akhir Kandidat
+**Pertanyaan:** Pernyataan integritas, izin peninjauan, dan pemahaman batas evaluasi rekrutmen.*  
+**Jawaban untuk di-copy-paste:**
+```text
+Saya menyatakan bahwa seluruh informasi, proses pengerjaan, dan kontribusi pribadi saya dalam tes praktik ini dijelaskan secara jujur dan transparan. Seluruh materi yang dilampirkan boleh digunakan dan dibagikan untuk keperluan evaluasi rekrutmen AI & Automation Specialist MSI Group, serta tidak memuat data rahasia pihak mana pun, kredensial produksi, ataupun akses ke sistem tertutup. Penggunaan bantuan AI (asisten AI Antigravity, model TTS neural, dan model AI pada proyek portofolio) telah diungkapkan secara terbuka, dan seluruh tautan publik telah dipastikan dapat diakses tanpa hambatan kata sandi. Saya memahami sepenuhnya bahwa pelaksanaan tes praktik simulasi ini merupakan bagian dari proses seleksi dan tidak menjamin penerimaan kerja, di mana ketentuan kerja akhir tetap berdasarkan kesepakatan resmi kedua belah pihak.
 ```
