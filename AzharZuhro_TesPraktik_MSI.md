@@ -7,14 +7,14 @@
 > **SIMULASI TES.** Seluruh nama perusahaan, data, angka, dan skenario dalam tugas A1–A6 bersifat fiktif untuk evaluasi rekrutmen. Tidak ada kontak nyata, data rahasia, kredensial, atau akses produksi.
 
 ## 0. Ringkasan Eksekutif (A0)
-| Kode | Tugas | Status Bukti | ID Bukti & Tautan |
+| Kode | Tugas | Status Bukti | Folder Solusi & ID Bukti |
 |---|---|---|---|
-| **A3** | Aplikasi web penilaian awards | **SOLUSI UTAMA, berjalan** (demo lokal & live GitHub Pages) | **A3-D01** (`bukti/A3/Demo.webm`), **A3-U01** (`bukti/A3/A3-U01-unit-test.txt`, `A3-U01-e2e.txt`), **A3-S01** (`bukti/A3/A3-S01-*.png`) |
-| **A1** | AI agent layanan & prospek | **Prototipe berjalan** | **A1-D01** (`A1-agent-layanan/`), **A1-U01** (`bukti/A1/A1-U01-hasil-uji.txt`), **A1-S01** (`bukti/A1/A1-S01-*.png`) |
-| **A6** | CRM marketing berbantuan AI | **Prototipe berjalan** | **A6-D01** (`A6-crm/`), **A6-U01** (`bukti/A6/A6-U01-hasil-uji.txt`), **A6-S01** (`bukti/A6/A6-S01-*.png`) |
-| **A2** | Video AI vertikal 9:16 | **Contoh terbatas berjalan** (klip animasi 32 dtk) | **A2-V01** (`bukti/A2/A2-V01-video-vertikal.mp4`), **A2-S01** (`A2-S01-subtitle.srt`, `A2-S01-preview-frame.png`), **A2-D01** (`A2-D01-metadata-youtube.md`) |
-| **A4** | Briefing layanan dari penjurian | **Contoh manual berbantuan AI** (1 halaman PDF) | **A4-B01** (`bukti/A4/A4-B01-briefing.pdf`), **A4-U01** (`bukti/A4/A4-U01-hasil-uji.txt`), **A4-S01** (`A4-S01-alur-akses-dan-persetujuan.md`) |
-| **A5** | Artikel jurnalistik & layout majalah | **Contoh terbatas** (artikel 260 kata + layout 1 hal) | **A5-N01** (`bukti/A5/A5-N01-artikel.md`), **A5-L01** (`bukti/A5/A5-L01-layout.pdf`, `.png`), **A5-U01** (`bukti/A5/A5-U01-hasil-uji.txt`) |
+| **A3** | Aplikasi web penilaian awards | **SOLUSI UTAMA, berjalan** (demo lokal & live GitHub Pages) | [`/A3-penilaian-awards`](./A3-penilaian-awards) · **A3-D01** (`bukti/A3/Demo.webm`), **A3-U01** (`bukti/A3/A3-U01-unit-test.txt`), **A3-S01** |
+| **A1** | AI agent layanan & prospek | **Prototipe berjalan** | [`/A1-agent-layanan`](./A1-agent-layanan) · **A1-D01**, **A1-U01** (`bukti/A1/A1-U01-hasil-uji.txt`), **A1-S01** |
+| **A6** | CRM marketing berbantuan AI | **Prototipe berjalan** | [`/A6-crm`](./A6-crm) · **A6-D01**, **A6-U01** (`bukti/A6/A6-U01-hasil-uji.txt`), **A6-S01** |
+| **A2** | Video AI vertikal 9:16 | **Contoh terbatas berjalan** (klip animasi 32 dtk) | [`/A2-video-ai`](./A2-video-ai) · **A2-V01** (`bukti/A2/A2-V01-video-vertikal.mp4`), **A2-S01**, **A2-D01** |
+| **A4** | Briefing layanan dari penjurian | **Contoh manual berbantuan AI** (1 halaman PDF) | [`/A4-briefing-layanan`](./A4-briefing-layanan) · **A4-B01** (`bukti/A4/A4-B01-briefing.pdf`), **A4-U01**, **A4-S01** |
+| **A5** | Artikel jurnalistik & layout majalah | **Contoh terbatas** (artikel 260 kata + layout 1 hal) | [`/A5-jurnalistik-layout`](./A5-jurnalistik-layout) · **A5-N01**, **A5-L01** (`bukti/A5/A5-L01-layout.pdf`), **A5-U01** |
 
 - **Alasan memilih A3 sebagai solusi utama:** Rumus penilaian, bobot, dan aturan validasinya eksplisit sehingga ketepatan perhitungannya dapat dibuktikan secara matematis dan diuji otomatis (S01 = **74,0**, S02 = **72,5**, S03 = **81,5**).
 - **Waktu aktual pengerjaan:** ± 5,5 jam dalam 2 hari (7–8 November 2026).

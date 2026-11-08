@@ -31,12 +31,12 @@ Kasus A3 memiliki spesifikasi matematika, logika pembobotan, dan integritas data
 Total waktu pengerjaan efektif adalah ± 5 jam dalam rentang 2 hari (sesuai anjuran 4–6 jam).
 
 3. STATUS BUKTI KESELURUHAN (A1–A6):
-- A3 (Solusi Utama): BERJALAN PENUH (Aplikasi web interaktif live GitHub Pages, 12 unit test lulus, 12 E2E browser walkthrough lulus, video demo rekaman layar kandidat 4m15s). ID: A3-D01, A3-U01, A3-S01.
-- A1: PROTOTIPE BERJALAN (Aturan kata kunci KB01–KB04, isolasi outbox, deduplikasi P03, 9 automated test lulus). ID: A1-D01, A1-U01, A1-S01.
-- A2: SELESAI / CONTOH TERBATAS (Video vertikal 9:16 motion-graphics 32,0 detik, subtitle safe-zone, narasi TTS neural). ID: A2-V01, A2-S01, A2-D01.
-- A4: SELESAI / DRAF MANUAL BERBANTUAN AI (Executive briefing 1 halaman PDF, pemisahan fakta vs interpretasi, diagram alur akses). ID: A4-B01, A4-U01, A4-S01.
-- A5: SELESAI / CONTOH ARTIKEL & TATA LETAK (Artikel 260 kata faktual tanpa audit independen, layout majalah 1 halaman PDF & grafik). ID: A5-N01, A5-L01, A5-U01.
-- A6: PROTOTIPE BERJALAN (Pipeline 10 prospek, validasi kebutuhan terkonfirmasi sebelum penawaran draf, deduplikasi, 10 unit test lulus). ID: A6-D01, A6-S01, A6-U01.
+- A3 (Solusi Utama): BERJALAN PENUH (Folder: /A3-penilaian-awards, Web live GitHub Pages, 12 unit test lulus, 12 E2E browser walkthrough lulus, video demo rekaman layar kandidat 4m15s). ID: A3-D01, A3-U01, A3-S01.
+- A1: PROTOTIPE BERJALAN (Folder: /A1-agent-layanan, Aturan kata kunci KB01–KB04, isolasi outbox, deduplikasi P03, 9 automated test lulus). ID: A1-D01, A1-U01, A1-S01.
+- A2: SELESAI / CONTOH TERBATAS (Folder: /A2-video-ai, Video vertikal 9:16 motion-graphics 32,0 detik, subtitle safe-zone, narasi TTS neural). ID: A2-V01, A2-S01, A2-D01.
+- A4: SELESAI / DRAF MANUAL BERBANTUAN AI (Folder: /A4-briefing-layanan, Executive briefing 1 halaman PDF, pemisahan fakta vs interpretasi, diagram alur akses). ID: A4-B01, A4-U01, A4-S01.
+- A5: SELESAI / CONTOH ARTIKEL & TATA LETAK (Folder: /A5-jurnalistik-layout, Artikel 260 kata faktual tanpa audit independen, layout majalah 1 halaman PDF & grafik). ID: A5-N01, A5-L01, A5-U01.
+- A6: PROTOTIPE BERJALAN (Folder: /A6-crm, Pipeline 10 prospek, validasi kebutuhan terkonfirmasi sebelum penawaran draf, deduplikasi, 10 unit test lulus). ID: A6-D01, A6-S01, A6-U01.
 
 4. TOOLS AI & TEKNOLOGI:
 - AI Coding & Assistant (Antigravity) untuk scaffolding kode dan dokumen.
@@ -103,6 +103,7 @@ METADATA YOUTUBE / PODCAST:
 - Deskripsi: Panduan memilih proses berulang, mencatat metrik waktu & eror, serta menyiapkan pengguna sebelum menerapkan AI. Dilengkapi bab penanda waktu (timestamp) dan disclaimer materi simulasi.
 
 ID & TAUTAN BUKTI:
+- Folder Solusi: https://github.com/azharzuhro12/tes-praktik-msi/tree/main/A2-video-ai
 - A2-V01: Berkas Video MP4 (https://github.com/azharzuhro12/tes-praktik-msi/raw/main/bukti/A2/A2-V01-video-vertikal.mp4)
 - A2-S01: Berkas Subtitle SRT & Preview Frame (https://github.com/azharzuhro12/tes-praktik-msi/tree/main/bukti/A2)
 - A2-D01: Metadata YouTube Lengkap (https://github.com/azharzuhro12/tes-praktik-msi/blob/main/bukti/A2/A2-D01-metadata-youtube.md)
@@ -160,6 +161,7 @@ KEBIJAKAN AKSES & PERSETUJUAN (GOVERNANCE):
 Hanya staf berizin yang dapat mengakses draf briefing. Draf berstatus internal dan wajib disetujui Manajer Konsultasi sebelum tim marketing membuat penawaran keluar.
 
 ID & TAUTAN BUKTI:
+- Folder Solusi: https://github.com/azharzuhro12/tes-praktik-msi/tree/main/A4-briefing-layanan
 - A4-B01: Dokumen Briefing 1 Halaman PDF (https://github.com/azharzuhro12/tes-praktik-msi/raw/main/bukti/A4/A4-B01-briefing.pdf)
 - A4-S01: Diagram Alur Akses & Persetujuan (https://github.com/azharzuhro12/tes-praktik-msi/blob/main/bukti/A4/A4-S01-alur-akses-dan-persetujuan.md)
 - A4-U01: Hasil Verifikasi Otomatis Isi Briefing (https://github.com/azharzuhro12/tes-praktik-msi/blob/main/bukti/A4/A4-U01-hasil-uji.txt)
@@ -182,6 +184,7 @@ DESAIN TATA LETAK & PERAN AI:
 - Keterbatasan: File PDF dihasilkan dari pipeline HTML-to-PDF headless Chromium; belum melalui proses prepress proofing (separasi warna CMYK dan margin bleed cetak percetakan).
 
 ID & TAUTAN BUKTI:
+- Folder Solusi: https://github.com/azharzuhro12/tes-praktik-msi/tree/main/A5-jurnalistik-layout
 - A5-N01: Naskah Artikel Lengkap (https://github.com/azharzuhro12/tes-praktik-msi/blob/main/bukti/A5/A5-N01-artikel.md)
 - A5-L01: Berkas Layout Majalah 1 Halaman PDF (https://github.com/azharzuhro12/tes-praktik-msi/raw/main/bukti/A5/A5-L01-layout.pdf)
 - A5-U01: Log Uji Otomatis Jumlah Kata & Integritas Klaim (https://github.com/azharzuhro12/tes-praktik-msi/blob/main/bukti/A5/A5-U01-hasil-uji.txt)
@@ -224,7 +227,7 @@ Laporan Lengkap dan Seluruh Berkas Bukti Penilaian:
 1. Berkas Laporan PDF Siap Cetak (AzharZuhro_TesPraktik_MSI.pdf):
 https://github.com/azharzuhro12/tes-praktik-msi/raw/main/AzharZuhro_TesPraktik_MSI.pdf
 
-2. Repositori Utama Proyek & Dokumentasi (GitHub):
+2. Repositori Utama Proyek & Seluruh Folder Solusi (A1–A6):
 https://github.com/azharzuhro12/tes-praktik-msi
 
 3. Folder Arsip Bukti Terlabel Lengkap (bukti/A1–bukti/A6):
