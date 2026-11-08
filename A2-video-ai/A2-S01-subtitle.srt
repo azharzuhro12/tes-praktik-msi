@@ -1,0 +1,20 @@
+1
+00:00:00,000 --> 00:00:05,200
+Ingin menggunakan AI di kantor?
+Mulai dari pekerjaan yang berulang.
+
+2
+00:00:05,200 --> 00:00:15,000
+Catat waktu yang dipakai, kesalahan yang sering muncul,
+dan siapa pengguna hasilnya.
+
+3
+00:00:15,000 --> 00:00:23,500
+Misalnya, merangkum pertanyaan klien
+dan menyiapkan draf jawaban untuk diperiksa staf.
+
+4
+00:00:23,500 --> 00:00:32,000
+Pilih satu pekerjaan, ukur kondisinya,
+lalu uji apakah otomasi membantu pengguna.
+
