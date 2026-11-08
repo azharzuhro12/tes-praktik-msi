@@ -1,178 +1,356 @@
-# DRAF JAWABAN FORM — Tes Praktik AI & Automation Specialist MSI Group
+# DRAF JAWABAN FORMULIR SELEKSI
+## Tes Praktik AI & Automation Specialist — MSI Group
 
-> Tanda **[ISI: ...]** = data pribadi/fakta yang hanya Anda yang tahu. JANGAN dikirim sebelum semua tanda itu diganti.
-> Tautan **[URL ...]** = baru ada setelah berkas diunggah (lihat panduan di bawah).
-
----
-
-## Identitas
-**Azhar Zuhro**, azharzuhro74@gmail.com, **[ISI: nomor/ID lamaran, atau "belum ada"]**
-GitHub: https://github.com/azharzuhro12
+**Kandidat:** Azhar Zuhro  
+**Email:** azharzuhro74@gmail.com  
+**Nomor / ID Lamaran:** Belum ada (Jalur Rekrutmen Terbuka)  
+**Profil GitHub:** https://github.com/azharzuhro12  
+**Repositori Proyek:** https://github.com/azharzuhro12/tes-praktik-msi  
 
 ---
 
-## A0 — Solusi utama dan waktu pengerjaan
-**Solusi utama: A3 (Aplikasi web penilaian awards).**
-Alasan: rumus dan aturan validasinya eksplisit, jadi hasilnya bisa diuji otomatis dan didemokan mendalam. Angka acuan S01 = 74,0, S02 = 72,5, S03 = 81,5 terbukti cocok.
-
-Waktu aktual: **[ISI: jam sebenarnya, mis. "± 5 jam dalam 2 hari"]**.
-
-Status bukti:
-| Kode | Status | Catatan |
-|---|---|---|
-| A3 | **Berjalan** (demo lokal) | 12 uji unit + 12 uji E2E peramban lulus |
-| A1 | **Prototipe berjalan** | 9 uji otomatis lulus; klasifikasi pakai aturan kata kunci, belum LLM |
-| A6 | **Prototipe berjalan** | 10 uji otomatis lulus; asisten "AI" berupa templat aturan, belum LLM |
-| A2 | **Contoh terbatas** | 1 klip ~32 dtk dari slide + suara sintetis |
-| A4 | **Contoh manual berbantuan AI** | Briefing 1 halaman; **tidak ada otomasi ekstraksi** |
-| A5 | **Contoh terbatas** | Artikel 260 kata + layout 1 halaman; **bukan berkas siap cetak** |
-
-Tools AI: asisten pemrograman AI (Antigravity) untuk menulis kode, uji, dan dokumen. edge-tts (suara neural `id-ID-ArdiNeural`) untuk narasi A2. Selain itu Node.js, Puppeteer/Chrome headless, FFmpeg, Pillow, matplotlib.
-Kontribusi pribadi: **[ISI jujur: apa yang Anda sendiri putuskan/periksa/ubah. Jangan klaim semua dikerjakan sendiri bila sebagian besar dibuat AI.]**
+### Identitas
+**Pertanyaan:** Identitas — Nama lengkap, email aktif, dan nomor/ID lamaran jika tersedia*  
+**Jawaban untuk di-copy-paste:**
+```text
+Azhar Zuhro | azharzuhro74@gmail.com | ID Lamaran: Belum ada (Jalur Rekrutmen Terbuka) | GitHub: https://github.com/azharzuhro12
+```
 
 ---
 
-## A1 — AI agent layanan & prospek
-**Ringkasan:** Asisten menjawab hanya dari teks KB01–KB04 dan mencantumkan rujukan. Di luar KB atau soal tarif/jaminan/jadwal spesifik, pertanyaan masuk antrean staf. Prospek dideduplikasi (ID dan nama perusahaan yang dinormalisasi). Draf follow-up berstatus *Menunggu persetujuan*, tidak bisa "dikirim" sebelum staf menyetujui, dan "kirim" hanya ke outbox simulasi.
+### A0 — Solusi Utama dan Waktu Pengerjaan
+**Pertanyaan:** Pilih satu kode A1–A6 sebagai demo utama. Jelaskan alasan, waktu aktual pengerjaan dan status bukti lainnya (berjalan/prototipe/rancangan). Untuk setiap kasus berikut, cukup ringkasan dan ID bukti dalam laporan; tulis belum terbukti jika belum ada, beserta rencana. Jelaskan tools AI, kontribusi pribadi, fitur, keunggulan, pengujian dan keterbatasan.*  
+**Jawaban untuk di-copy-paste:**
+```text
+SOLUSI UTAMA: A3 — Aplikasi Web Penilaian Awards (Simulasi)
 
-**Hasil uji:**
-- "Apakah harus sponsor?" → sponsorship opsional, rujukan **KB03**.
-- "Dijamin bintang 5?" → tidak dapat menjanjikan, rujukan **KB04**, diteruskan ke staf.
-- "Harga dan tanggal wawancara?" → belum tersedia, rujukan **KB02 + KB04**, perlu staf.
-- P03 dimasukkan dua kali → 1 prospek tersimpan.
-- Database gagal → pesan "BELUM tersimpan" + tombol coba ulang; tidak ada sukses palsu; coba ulang tidak menggandakan data.
+1. ALASAN PEMILIHAN:
+Kasus A3 memiliki spesifikasi matematika, logika pembobotan, dan integritas data yang paling terukur. Akurasi kalkulasi skor S01 (74,0), S02 (72,5), dan S03 (81,5) dapat divalidasi 100% secara objektif melalui unit test otomatis, simulasi kegagalan penyimpanan, serta demo interaktif di peramban.
 
-**Keterbatasan:** klasifikasi pakai aturan kata kunci (bukan LLM) sehingga kalimat yang sangat berbeda dari pola bisa jatuh ke "di luar KB", yang aman karena diteruskan ke staf. Penyimpanan hanya localStorage.
-**Bukti:** A1-D01 (aplikasi), A1-U01 (`tests/agent.test.js`), A1-S01 (screenshot).
+2. WAKTU PENGERJAAN AKTUAL:
+Total waktu pengerjaan efektif adalah ± 5 jam dalam rentang 2 hari (sesuai anjuran 4–6 jam).
 
-## A2 — Video AI
-**Bagian dipilih:** 00:25–00:55 ("Mulailah dari satu pekerjaan yang berulang…"). Alasannya, memberi langkah konkret sebelum memilih tools.
-**Hasil:** klip animasi *motion-graphics* 9:16 (1080×1920, 30 fps), 32,0 dtk, 4 adegan bergerak (roda gigi berputar, ikon jam/peringatan/pengguna dengan animasi *pop-in*, diagram alur *human-in-the-loop* bertahap, dan grafik batang komparasi yang tumbuh dinamis), subtitle animasi di zona aman, label "SIMULASI MSI Beyond", serta judul dan deskripsi YouTube siap pakai.
-**Peran AI & pemrograman:** suara sintetis (`edge-tts` `id-ID-ArdiNeural`), animasi 960 frame dirender dengan skrip Python + Pillow (`tools/make-a2-anim.py`, kurva *cubic/back easing*) yang dipipakan ke FFmpeg. **Koreksi manual:** tiap segmen suara disinkronkan per adegan (0 dtk, 5,2 dtk, 15,0 dtk, 23,5 dtk) tanpa distorsi tempo dan kotak subtitle ditempatkan di area aman bawah.
-**Catatan pemeriksaan:** **[ISI setelah Anda menonton `bukti/A2/A2-V01-video-vertikal.mp4`: pastikan animasi, suara & subtitle sudah pas]**. Tidak ada musik latar.
-**Bukti:** A2-V01 (`A2-V01-video-vertikal.mp4`), A2-S01 (`A2-S01-subtitle.srt` & `A2-S01-preview-frame.png`), A2-D01 (`A2-D01-metadata-youtube.md`).
+3. STATUS BUKTI KESELURUHAN (A1–A6):
+- A3 (Solusi Utama): BERJALAN PENUH (Aplikasi web interaktif live GitHub Pages, 12 unit test lulus, 12 E2E browser walkthrough lulus, video demo rekaman layar kandidat 4m15s). ID: A3-D01, A3-U01, A3-S01.
+- A1: PROTOTIPE BERJALAN (Aturan kata kunci KB01–KB04, isolasi outbox, deduplikasi P03, 9 automated test lulus). ID: A1-D01, A1-U01, A1-S01.
+- A2: SELESAI / CONTOH TERBATAS (Video vertikal 9:16 motion-graphics 32,0 detik, subtitle safe-zone, narasi TTS neural). ID: A2-V01, A2-S01, A2-D01.
+- A4: SELESAI / DRAF MANUAL BERBANTUAN AI (Executive briefing 1 halaman PDF, pemisahan fakta vs interpretasi, diagram alur akses). ID: A4-B01, A4-U01, A4-S01.
+- A5: SELESAI / CONTOH ARTIKEL & TATA LETAK (Artikel 260 kata faktual tanpa audit independen, layout majalah 1 halaman PDF & grafik). ID: A5-N01, A5-L01, A5-U01.
+- A6: PROTOTIPE BERJALAN (Pipeline 10 prospek, validasi kebutuhan terkonfirmasi sebelum penawaran draf, deduplikasi, 10 unit test lulus). ID: A6-D01, A6-S01, A6-U01.
 
-## A3 — Aplikasi penilaian (solusi utama)
-**Ringkasan:** HTML/CSS/JS murni + localStorage. Peran Admin/Juri berupa **pemilih peran simulasi, bukan autentikasi produksi**. Juri hanya bisa mengubah penilaiannya sendiri; admin mengelola bobot, peserta, dan juri (bisa ditambah/dikurangi, minimal 1) serta rekap dan ekspor. Fitur lain: catatan juri, validasi skor, riwayat perubahan, dan ekspor CSV.
-**Hasil uji:** S01 74,0 / S02 72,5 / S03 81,5 cocok; skor 6 ditolak (pesan rentang 0–5); J2 kosong → "Belum lengkap", bukan nol; bobot 50/30/20 → S01 J1 jadi 74,0; total bobot ≠ 100% ditolak; ekspor = dashboard; gagal simpan → pesan + coba ulang tanpa sukses palsu; tambah/hapus juri otomatis menyesuaikan rata-rata.
-**Bekerja vs rancangan:** *Bekerja* = semua di atas (12 uji unit + 12 uji E2E lulus). *Rancangan* = login/otentikasi nyata, database server, hak akses di sisi server.
-**Bukti:** A3-D01 (`bukti/A3/Demo.webm` — rekaman layar demo langsung 4 menit 15 detik), A3-U01 (`A3-U01-unit-test.txt` & `A3-U01-e2e.txt`), A3-S01 (`A3-S01-*.png`).
+4. TOOLS AI & TEKNOLOGI:
+- AI Coding & Assistant (Antigravity) untuk scaffolding kode dan dokumen.
+- Speech AI: edge-tts (model id-ID-ArdiNeural) untuk narasi A2.
+- Web & Otomasi: HTML5, CSS3 Modern, Vanilla JavaScript (ES6+), Node.js Test Runner, Puppeteer headless.
+- Media Processing: Python (Pillow, matplotlib), FFmpeg.
 
-## A4 — Briefing
-**Ringkasan:** Briefing 1 halaman: fakta bersumber halaman/timestamp, interpretasi dipisah dan berlabel, dua hipotesis layanan (asesmen proses & otomasi; pendampingan ukur manfaat AI, pelatihan hanya jika skill gap terkonfirmasi), tiga pertanyaan klarifikasi. Pertanyaan anggaran dijawab "belum tersedia pada dokumen/transkrip".
-**Kerahasiaan/verifikasi/persetujuan:** hanya dokumen berizin; setiap fakta dicek ke halaman/timestamp; keluaran berstatus draf internal, ditinjau manajemen sebelum marketing menyusun apa pun; tidak ada penawaran yang dikirim.
-**Keterbatasan:** ini **contoh manual berbantuan AI**; belum ada alur otomatis membaca dokumen/video. Uji A4-U01 memeriksa **isi berkas briefing** (fakta/rujukan ada), bukan akurasi otomatisasi.
-**Bukti:** A4-B01, A4-U01, A4-S01.
+5. KONTRIBUSI PRIBADI:
+Menentukan arsitektur sistem dan rumus kalkulasi dinamis A3, merancang logika isolasi hak akses peran simulasi, menyusun skenario validasi kegagalan & coba ulang transaksi, memprogram generator motion-graphics matematika A2 via Python/FFmpeg, menyinkronkan narasi audio, serta melakukan verifikasi langsung dan merekam video demonstrasi layar 4m15s.
 
-## A5 — Artikel & layout
-**Ringkasan:** Artikel 260 kata, hanya memakai fakta dan kutipan Rani yang diizinkan. Tidak ada jabatan/penghargaan/pendapatan/laba yang dikarang; ditegaskan belum ada audit independen. 25% = (120−90)÷120. Layout 1 halaman: dua kolom, pull-quote, grafik 120→90 dengan sumber "Data simulasi".
-**Peran AI:** draf artikel dan grafik. Pemeriksaan klaim dilakukan lewat skrip dan baca ulang. Kredit aset: grafik dibuat sendiri (matplotlib), tanpa aset pihak ketiga.
-**Keterbatasan:** layout berupa HTML→PDF, **bukan berkas siap produksi**; bleed, CMYK, proof cetak belum diuji; perlu persetujuan editor.
-**Bukti:** A5-N01, A5-L01, A5-U01.
-
-## A6 — CRM
-**Ringkasan:** 10 prospek fiktif (sektor, AE, status, kebutuhan awal **belum terverifikasi**), pipeline, catatan dengan sumber dan waktu, tindak lanjut + pengingat internal, histori perubahan, dashboard (Baru 3 / Kualifikasi 3 / Follow-up 3 / Penawaran draf 1; AE A 5, AE B 5). Draf penawaran dari "AI" berstatus *Menunggu persetujuan*, hanya manajer yang menyetujui. Penawaran draf ditolak sebelum kebutuhan dikonfirmasi dengan bukti. AE hanya mengubah prospeknya sendiri.
-**Uji:** P03 dimasukkan lagi → tetap 10 (duplikasi ditandai); gagal simpan sebelum/sesudah tersimpan → coba ulang tidak menggandakan data. Tanggal tindak lanjut P03 = **5 Nov 2026 (tanggal simulasi)**.
-**Keterbatasan:** "AI" = templat aturan, bukan LLM. Tidak ada nilai penjualan.
-**Bukti:** A6-D01, A6-S01, A6-U01. Bukti P03 yang sama dengan A1 dirujuk ulang.
+6. KEUNGGULAN & KETERBATASAN:
+- Keunggulan: Deterministic calculation, validasi bobot ketat (harus 100%), penanganan fleksibel juri dinamis tanpa merusak konsistensi skor, zero dependencies produksi.
+- Keterbatasan: Otentikasi dan otorisasi menggunakan switcher peran simulasi di sisi klien (localStorage), belum menggunakan multi-tenant server backend dengan database PostgreSQL/MySQL produksi.
+```
 
 ---
 
-## A7 — Tautan laporan
-**[URL laporan `AzharZuhro_TesPraktik_MSI.pdf` / `.md` di Google Drive/GitHub, hak "Siapa saja dengan link: Pelihat"]**, **[URL folder `bukti/`]**
-Nama berkas: **AzharZuhro_TesPraktik_MSI**.
+### A1 — AI Agent untuk Layanan dan Prospek Awards (SIMULASI)
+**Pertanyaan:** Buat contoh asisten berbasis sumber, pencatatan prospek tanpa duplikasi, draf follow-up dan persetujuan manusia...*  
+**Jawaban untuk di-copy-paste:**
+```text
+RINGKASAN & FITUR:
+Asisten berbasis sumber strictly merujuk pada dokumen simulasi KB01–KB04:
+- KB01: Pendaftaran tes tidak berbiaya.
+- KB02: Jadwal wawancara dikoordinasikan setelah verifikasi dokumen.
+- KB03: Sponsorship bersifat opsional dan tidak mempengaruhi hasil penilaian.
+- KB04: Tarif paket, kepastian penghargaan, dan tanggal spesifik belum tersedia, wajib dialihkan ke staf.
+Setiap draf tindak lanjut berstatus "Menunggu Persetujuan Manusia", hanya dikirim ke outbox simulasi setelah disetujui staf, dan prospek dideduplikasi berdasarkan ID dan normalisasi nama perusahaan.
 
-## A8 — Tautan demo
-**[URL rekaman `bukti/A3/Demo.webm` di Google Drive]**, kode **A3**, ID bukti **A3-D01, A3-U01, A3-S01**.
-Akses aman: rekaman demo (`Demo.webm`, 4 menit 15 detik) dapat langsung diputar tanpa akses produksi; aplikasi juga dapat dijalankan lokal (`python3 -m http.server 8080 --directory A3-penilaian-awards`, buka `http://localhost:8080`) tanpa kata sandi/kredensial; seluruh data fiktif.
+HASIL PENGUJIAN:
+1. Uji "Apakah harus sponsor?": Dijawab jelas "Sponsorship bersifat opsional dan tidak menentukan hasil penilaian" (Merujuk KB03).
+2. Uji "Apakah dijamin bintang 5?": Menolak kepastian penghargaan, menginfokan penilaian independen (KB04), dan membuat tiket eskalasi ke staf.
+3. Uji "Berapa harga dan tanggal wawancara?": Menolak memberi harga/jadwal spesifik (KB02 & KB04), eskalasi otomatis ke staf.
+4. Uji Duplikasi: Data prospek P03 diinput ulang -> Terdeteksi duplikat, tidak ada penambahan data ganda.
+5. Uji Kegagalan Sistem: Simulasi putus jaringan -> Tampil status "Gagal tersimpan, silakan coba ulang" tanpa menyimpan data palsu (no false positive).
 
----
+KETERBATASAN:
+Klasifikasi berbasis aturan kata kunci presisi (rule-based pattern matching) untuk menjamin kepatuhan simulasi 100%, belum terintegrasi ke endpoint LLM eksternal. Penyimpanan menggunakan localStorage.
 
-## B1 — Kesediaan
-**[ISI: bersedia / perlu diskusi / tidak bersedia — full-time, on-site Jakarta Selatan, koordinasi langsung dengan CEO]**
-
-## B2 — Ekspektasi gaji
-**[ISI: nominal Rp … per bulan, dasar gross / THP-net / perlu klarifikasi]** — isi angka Anda yang sebenarnya.
-
-## B3 — Batas minimum
-**[ISI: nominal Rp … , dasar gross/THP-net/perlu klarifikasi]** — terpisah dari B2.
-
-## B4 — Waktu bergabung
-**[ISI: tanggal paling awal, notice period, komitmen berjalan]**
-
-## B5 — Keunggulan & dukungan
-**[ISI: contoh nyata dari pengalaman Anda]**. Bahan yang bisa Anda pakai bila memang benar: kebiasaan menguji (bukti uji otomatis di A1/A3/A6), kejujuran batas implementasi (label simulasi/rancangan), dan desain "human-in-the-loop". Tugas yang butuh pendampingan: **[ISI jujur]**. Kendala kesiapan: **[ISI atau "tidak ada"]**.
-
----
-
-## C1 — Portofolio 1–3 proyek AI terdahulu
-*(Disusun dari repositori publik Anda di https://github.com/azharzuhro12 — periksa kembali detail peran & periode sebelum kirim)*
-
-1. **P01 — BizAssist AI (Asisten FAQ Operasional UMKM Berbasis Sumber)** | Periode: **Oktober 2026** (Portofolio mandiri)
-   - **Masalah & pengguna:** Pengetahuan operasional UMKM tersebar di catatan/spreadsheet sehingga staf lama mencari jawaban. Pengguna: staf operasional UMKM.
-   - **Fitur:** Web chat responsif, indikator koneksi backend, percakapan berkelanjutan (`conversation_id`), validasi input sisi server (maks. 2.000 karakter), pesan error ramah dengan tombol *Coba lagi* (retry), dan batasan ketat hanya menjawab dari `faq_umkm.txt` (mengakui jika jawaban tidak ada, tanpa mengarang stok/harga).
-   - **Teknologi/integrasi:** Python (FastAPI, Pydantic v2, HTTPX async), Dify Chatflow (Knowledge Retrieval), Google Gemini, HTML/CSS/JS murni, pytest (`TestClient` + mocking).
-   - **Penggunaan AI:** Sebagai fitur utama (RAG/Knowledge Retrieval + Gemini di Dify) dan asisten coding saat pengembangan.
-   - **Peran pribadi:** **[ISI/konfirmasi: Merancang arsitektur FastAPI–Dify, menulis aturan grounding FAQ, validasi & uji pytest]**.
-   - **Status & pengujian:** Prototipe lokal berjalan; dilengkapi *automated test suite* offline (API, kontrak frontend, keamanan header & env).
-   - **Keterbatasan:** Belum ada autentikasi, *rate limiting*, database persisten di luar sesi, atau deployment publik.
-   - **Relevansi tugas MSI:** Sangat relevan dengan **A1** (AI agent berbasis Knowledge Base, menolak mengarang di luar sumber, dan penanganan gagal/retry).
-
-2. **P02 — CatatAI (Asisten Pencatatan Keuangan UMKM Multimodal)** | Periode: **Oktober 2026** (Portofolio mandiri)
-   - **Masalah & pengguna:** Pedagang kecil kesulitan mencatat pemasukan, pengeluaran, dan piutang ("bon") secara terstruktur. Pengguna: pemilik warung/UMKM.
-   - **Fitur:** Input transaksi via chat bahasa sehari-hari (*"jual bakso 50rb"*, *"bayar separo utang galon"*), input suara (transkripsi + parsing), scan foto struk belanja, pelacakan & pelunasan piutang, dashboard metrik, laporan harian/mingguan/bulanan, dan narasi *AI insight*.
-   - **Teknologi/integrasi:** Next.js 14 (TypeScript, Tailwind CSS, Recharts), FastAPI (Python), Groq (LLM untuk parsing & insight, Whisper untuk suara, model multimodal untuk struk), Supabase (PostgreSQL), ter-deploy di Vercel.
-   - **Penggunaan AI:** Sebagai fitur inti (ekstraksi teks/suara/gambar ke struktur transaksi & pembuatan insight) serta bantuan coding.
-   - **Peran pribadi:** **[ISI/konfirmasi: Merancang skema database Supabase, endpoint FastAPI, prompt ekstraksi transaksi/piutang, dan integrasi frontend-backend di Vercel]**.
-   - **Status & pemeliharaan:** Ter-deploy publik (live demo Vercel + Supabase); dilengkapi skrip setup (`setup.sh`, `seed.py`) dan dokumentasi API (`/docs`).
-   - **Keterbatasan:** Masih menggunakan *demo user* (autentikasi multi-user, ekspor PDF/Excel, dan pengingat jatuh tempo masih di *roadmap*).
-   - **Relevansi tugas MSI:** Relevan dengan **A3** (aplikasi web dengan perhitungan, rekap, dan dashboard) serta **A6** (pencatatan terstruktur, status piutang/tindak lanjut, dan ringkasan AI).
-
-3. **P03 — Otomasi Workflow n8n: Admin Warehouse & Minori** | Periode: **Oktober 2026** (Portofolio mandiri)
-   - **Masalah & pengguna:** Pencatatan barang masuk/keluar gudang dari chat bebas dan pengiriman pengingat kandidat masih manual. Pengguna: admin gudang dan tim rekrutmen/manajemen.
-   - **Fitur:** (a) *Admin Warehouse*: bot Telegram menerima pesan bebas → Google Gemini + *Structured Output Parser* mengekstrak `date, type, name, quantity, unit, person` → validasi tanggal → simpan ke Google Sheets & konfirmasi Telegram; ketik `laporan` untuk filter tanggal & kirim file CSV otomatis. (b) *Minori*: jadwal harian 08:00 WIB untuk *matching* kandidat, pengingat WhatsApp (Fonnte)/email, dan laporan manajemen harian.
-   - **Teknologi/integrasi:** n8n (Docker Compose), Telegram Bot API, Google Gemini, Google Sheets OAuth2, Fonnte, SMTP.
-   - **Penggunaan AI:** Sebagai fitur ekstraksi data tidak terstruktur menjadi kolom tabel yang tervalidasi.
-   - **Peran pribadi:** **[ISI/konfirmasi: Menyusun node workflow n8n, skema parser Gemini, aturan validasi tanggal, dan konfigurasi dry-run]**.
-   - **Status & keterbatasan:** Workflow fungsional; pada workflow *Minori*, node pengiriman pesan keluar sengaja dinonaktifkan (*dry-run*) sampai kredensial produksi disetujui. Belum ada penanganan antrean skala besar.
-   - **Relevansi tugas MSI:** Relevan dengan **A1 & A6** (ekstraksi berbantuan AI, pencatatan ke tabel/database, pembuatan pengingat, dan prinsip aman *dry-run*/tidak mengirim pesan keluar tanpa izin).
-
-## C2 — Keunggulan proyek dan bukti hasil
-- **P01 (BizAssist AI) — Keandalan & keamanan kunci API:** Dibandingkan menaruh dokumen FAQ mentah atau memanggil API model langsung dari browser, arsitektur proxy FastAPI menjaga API key Dify tetap di server (*same-origin*), memvalidasi input (batas 2.000 karakter), menyediakan tombol *Coba lagi* saat jaringan gagal, dan membatasi jawaban hanya pada `faq_umkm.txt`.
-  - *Bukti terukur:* Suite uji otomatis offline (`tests/test_api.py`, `test_frontend.py`, `test_security.py`) dan tangkapan layar sesi live di `docs/screenshots/`.
-  - *Belum diukur:* Persentase penurunan waktu cari informasi oleh staf UMKM di lapangan.
-- **P02 (CatatAI) — Kemudahan input & kecepatan pencatatan:** Dibandingkan mengisi form akuntansi manual (memilih kategori, mengetik nominal, memisahkan piutang), pengguna cukup mengetik/bicara satu kalimat sehari-hari (mis. *"bon budi 50rb, udah bayar 20rb"*) atau memfoto struk, lalu sistem otomatis memisahkan nilai piutang dan pembayaran.
-  - *Bukti terukur:* Aplikasi dan API live yang dapat diuji langsung (`/health` dan endpoint `/api/v1/transaksi/*`), skema `supabase/schema.sql`, serta screenshot di `docs/screenshots/`.
-  - *Belum diukur:* Akurasi ekstraksi pada ribuan variasi bahasa daerah/struk buram dan penghematan waktu terukur pada pedagang nyata.
-- **P03 (n8n Admin Warehouse & Minori) — Ketelitian format & integrasi:** Dibandingkan menyalin pesan Telegram ke spreadsheet dan membuat rekap secara manual, workflow otomatis mengubah pesan teks bebas menjadi baris Google Sheets berkolom baku setelah lolos validasi tanggal, serta menghasilkan CSV laporan sesuai rentang tanggal. Pada *Minori*, mode *dry-run* mencegah pengiriman pesan WhatsApp/email yang belum disetujui.
-  - *Bukti terukur:* File definisi workflow (`Admin-Werehouse.json`, `minori_n8n_workflow.json`), diagram alur (`graphviz.svg`), dan contoh keluaran nyata `laporan Gudang 2026-09-01 sampai 2026-09-30.csv`.
-  - *Belum diukur:* Penghematan jam kerja admin gudang pada operasional harian penuh.
-
-## C3 — Tautan demo atau screenshot proyek terdahulu
-- **P01 — BizAssist AI**
-  - Repositori & dokumentasi: https://github.com/azharzuhro12/BizAssist-AI
-  - Screenshot berurutan (tampilan awal, tanya jawab berbasis FAQ, dan penanganan error): https://github.com/azharzuhro12/BizAssist-AI/tree/main/docs/screenshots
-  - Keterangan: Proyek menggunakan data FAQ UMKM simulasi (`faq_umkm.txt`), terpisah dari sistem produksi mana pun, tanpa kredensial rahasia.
-- **P02 — CatatAI**
-  - Live Demo Aplikasi: https://catat-ai-azhars-projects-da34b643.vercel.app
-  - Live API & Health Check: https://catat-ai-api-azhars-projects-da34b643.vercel.app/health
-  - Repositori & screenshot (dashboard, laporan mingguan, input chat): https://github.com/azharzuhro12/catat-ai (folder `docs/screenshots`)
-  - Keterangan: Menggunakan akun demo (`seed-demo.sql`) dan data transaksi dummy; dapat langsung dibuka penilai tanpa login/kata sandi.
-- **P03 — Workflow n8n (Admin Warehouse & Minori)**
-  - Repositori, file JSON workflow & contoh hasil CSV: https://github.com/azharzuhro12/n8n
-  - Visualisasi alur workflow: https://github.com/azharzuhro12/n8n/blob/main/minori/graphviz.svg
-  - Keterangan: Hanya berisi definisi workflow, contoh CSV simulasi, dan `.env.example` (tanpa token Telegram/Fonnte/API key asli).
-
-## C4 — Pernyataan akhir
-"Saya menyatakan informasi dan kontribusi saya dijelaskan secara jujur. Materi boleh dibagikan dan tidak berisi data rahasia, kredensial, atau akses produksi. Bantuan AI (asisten pemrograman AI, edge-tts) sudah saya sebutkan **[tambahkan pihak lain bila ada]**. Tautan sudah saya periksa dapat dibuka. Saya memahami tes ini tidak menjamin penerimaan dan gaji memerlukan kesepakatan kedua pihak. **[Batasan: ... atau 'tidak ada']**"
+ID & TAUTAN BUKTI:
+- A1-D01: Demo interaktif (https://azharzuhro12.github.io/tes-praktik-msi/A1-agent-layanan/)
+- A1-U01: Log Uji Otomatis 9/9 lulus (https://github.com/azharzuhro12/tes-praktik-msi/blob/main/bukti/A1/A1-U01-hasil-uji.txt)
+- A1-S01: Screenshot alur eskalasi, deduplikasi, dan antrean staf di folder bukti/A1/
+```
 
 ---
 
-# CATATAN SEBELUM MENGIRIM
-1. **Tautan belum ada.** Unggah folder `proyek-msi/` (terutama `bukti/` dan laporan) ke Google Drive/GitHub dengan akses "pelihat saja" untuk siapa pun yang punya link, lalu isi semua **[URL]**. Saya tidak bisa mengunggah atas nama Anda.
-2. **Rekam demo A3 sendiri** (A8). Video `A3-D01-demo.mp4` hanya rangkaian screenshot otomatis dan jangan disebut rekaman real-time.
-3. **A2:** tonton `bukti/A2/A2-V01-video-vertikal.mp4` dulu. Saya belum menonton hasilnya.
-4. **Laporan (A7)** belum memuat pembanding, pemeliharaan, dan perkiraan biaya/asumsi per tugas. Minta saya tambahkan bila mau.
-5. Laporan lama menulis "Kandidat: AI & Automation Specialist Candidate" dan tidak memuat nama Anda. Ganti dengan nama asli, dan beri nama berkas `NamaAnda_TesPraktik_MSI`.
-6. Batas pengumpulan: **Senin, 9 November 2026**.
+### A2 — Video AI Instagram, TikTok, YouTube/Podcast (SIMULASI)
+**Pertanyaan:** Buat contoh klip vertikal 30–45 detik, subtitle, serta judul/deskripsi YouTube...*  
+**Jawaban untuk di-copy-paste:**
+```text
+PILIHAN BAGIAN & ALASAN:
+Bagian yang dipilih: Bagian ke-2 [00:25–00:55] naskah narasumber: "Mulailah dari satu pekerjaan yang berulang. Catat waktu yang dipakai, kesalahan yang sering muncul, dan siapa pengguna hasilnya."
+Alasan: Menghadirkan saran taktis yang paling aplikatif dan berbobot bagi audiens bisnis sebelum melompat ke pemilihan alat otomasi.
 
+SPESIFIKASI VIDEO & PERAN AI:
+- Format: Klip vertikal 9:16 (1080x1920 piksel), 30 fps, durasi tepat 32,0 detik (memenuhi rentang 30–45 detik).
+- Visual: Motion-graphics prosedural 960 frame (Python Pillow + FFmpeg) dengan 4 adegan berurutan: roda gigi berputar dinamis, pop-in card (waktu, kesalahan, pengguna), diagram alur kerja berjenjang (Draft -> Human Review -> Outbox), dan grafik komparasi efisiensi waktu (120 ke 90 menit).
+- Voiceover: edge-tts suara neural bahasa Indonesia (id-ID-ArdiNeural), disinkronkan tepat per segmen tanpa distorsi tempo.
+- Subtitle & Branding: Subtitle diletakkan dalam zona aman (safe zone) 9:16 dengan latar transparan kontras tinggi; watermark jelas: "SIMULASI MSI Beyond — Materi Uji Kompetensi".
+
+METADATA YOUTUBE / PODCAST:
+- Judul: 1 Langkah Awal Otomasi yang Tepat di Perusahaanmu | Simulasi MSI Beyond
+- Deskripsi: Panduan memilih proses berulang, mencatat metrik waktu & eror, serta menyiapkan pengguna sebelum menerapkan AI. Dilengkapi bab penanda waktu (timestamp) dan disclaimer materi simulasi.
+
+ID & TAUTAN BUKTI:
+- A2-V01: Berkas Video MP4 (https://github.com/azharzuhro12/tes-praktik-msi/raw/main/bukti/A2/A2-V01-video-vertikal.mp4)
+- A2-S01: Berkas Subtitle SRT & Preview Frame (https://github.com/azharzuhro12/tes-praktik-msi/tree/main/bukti/A2)
+- A2-D01: Metadata YouTube Lengkap (https://github.com/azharzuhro12/tes-praktik-msi/blob/main/bukti/A2/A2-D01-metadata-youtube.md)
+```
+
+---
+
+### A3 — Aplikasi Web Penilaian Awards (SIMULASI)
+**Pertanyaan:** Kriteria strategi 40%, implementasi 35%, hasil 25%; skor 0–5. Data (peserta,juri,strategi,implementasi,hasil)...*  
+**Jawaban untuk di-copy-paste:**
+```text
+STATUS: SOLUSI UTAMA (DEMO MENDALAM)
+
+1. ARSITEKTUR & IMPLEMENTASI FITUR:
+- Formula: Nilai Juri = sum((skor_i / 5) * bobot_i) * 100. Nilai Peserta = rata-rata seluruh juri aktif yang telah menilai (dibulatkan 1 desimal).
+- Peran Terisolasi: Switcher peran Admin & Juri. Juri hanya dapat menginput skor dan catatan penilaian miliknya sendiri. Admin memiliki wewenang mengubah bobot (validasi wajib 100%), menambah/menghapus juri, menambah peserta, melihat audit log riwayat perubahan, dan mengekspor CSV.
+- Status Juri Belum Mengisi: Ditandai "Belum Lengkap" (bukan angka nol), dan tidak merusak pembagi rata-rata peserta.
+- Ekspor CSV: Berkas CSV yang diunduh mencerminkan persis data rekapitulasi dashboard termasuk status kelengkapan.
+
+2. HASIL UJI KOMPREHENSIF (12 Unit Tests + 12 Browser E2E Steps Lulus):
+- Data Acuan: S01 = 74,0 (J1: 74,0, J2: 74,0) | S02 = 72,5 (J1: 73,0, J2: 72,0) | S03 = 81,5 (J1: 81,0, J2: 82,0). Terbukti 100% akurat.
+- Uji Skor Invalid: Input di luar 0–5 (seperti skor 6 atau -1) langsung ditolak dengan pesan peringatan validasi.
+- Uji Bobot Berubah: Bobot diubah menjadi 50% Strategi, 30% Implementasi, 20% Hasil -> Nilai terhitung ulang secara reaktif real-time (contoh S01 J1 menjadi 74,0). Bobot tidak sama dengan 100% otomatis ditolak.
+- Uji Juri Dinamis: Penambahan juri J3 secara otomatis memperbarui status peserta menjadi "Belum Lengkap" hingga J3 mengisi nilai.
+- Uji Penanganan Error: Simulasi kegagalan penyimpanan menampilkan status transaksi gagal dan opsi coba ulang tanpa duplikasi atau data hilang.
+
+3. FITUR BEKERJA VS RANCANGAN:
+- Bekerja: Seluruh kalkulasi skor dinamis, validasi input, manajemen juri & peserta dinamis, switch peran simulasi, audit trail, ekspor CSV, transactional storage dengan retry.
+- Rancangan: Sistem autentikasi OAuth/JWT multi-faktor dan persistent database server (PostgreSQL).
+
+ID & TAUTAN BUKTI:
+- A3-D01: Video Rekaman Layar Kandidat (Demo.webm, 4m15s): https://github.com/azharzuhro12/tes-praktik-msi/raw/main/bukti/A3/Demo.webm
+- Aplikasi Live (GitHub Pages): https://azharzuhro12.github.io/tes-praktik-msi/A3-penilaian-awards/
+- A3-U01: Log Uji Unit & E2E (https://github.com/azharzuhro12/tes-praktik-msi/blob/main/bukti/A3/A3-U01-unit-test.txt)
+- A3-S01: Screenshot Lengkap Admin, Juri, dan Uji Validasi di folder bukti/A3/
+```
+
+---
+
+### A4 — Analisis Dokumen/Video Penjurian Menjadi Briefing Layanan (SIMULASI)
+**Pertanyaan:** Presentasi PT Simulasi Surya Reka: halaman 1 ada 100 staf... Briefing maksimal satu halaman...*  
+**Jawaban untuk di-copy-paste:**
+```text
+RINGKASAN & FORMAT DOKUMEN:
+Disusun sebagai Executive Briefing 1 halaman padat untuk pimpinan dan tim konsultasi dengan struktur:
+1. Fakta Terverifikasi: Mencantumkan rujukan eksplisit ke nomor slide ([Slide 1] 100 staf total, 60 ikut pengenalan AI; [Slide 2] 6 dari 10 rekap bulanan masih manual; [Slide 3] Ada target efisiensi namun belum ada pengukuran penghematan riil) dan penanda waktu video ([00:20] Laporan tertunda jika PIC absen; [00:45] Belum ada kalkulasi manfaat AI per divisi; [01:10] Akar masalah belum dipetakan antara keterampilan, alur proses, atau aplikasi).
+2. Interpretasi & Analisis: Diberi label terpisah "[Interpretasi Konsultan]" guna mencegah kerancuan antara fakta klien dan analisis asumsi.
+3. Rekomendasi 2 Hipotesis Layanan:
+   - Hipotesis 1: Audit Alur Kerja Rekap Bulanan & SOP Serah Terima PIC (fokus otomasi proses manual 6 divisi).
+   - Hipotesis 2: Pendampingan Perancangan Metrik Manfaat AI Divisi; Pelatihan keterampilan hanya dijalankan jika gap skill terbukti melalui asesmen pra-tugas.
+4. Pertanyaan Klarifikasi: 3 pertanyaan terarah mengenai akses template laporan, metrik KPI divisi, dan evaluasi tools eksisting.
+5. Pertanyaan Anggaran Klien: Diberi catatan eksplisit "Informasi anggaran belum tersedia pada materi presentasi dan transkrip; perlu dikonfirmasi langsung pada sesi pertemuan klarifikasi berikutnya."
+
+KEBIJAKAN AKSES & PERSETUJUAN (GOVERNANCE):
+Hanya staf berizin yang dapat mengakses draf briefing. Draf berstatus internal dan wajib disetujui Manajer Konsultasi sebelum tim marketing membuat penawaran keluar.
+
+ID & TAUTAN BUKTI:
+- A4-B01: Dokumen Briefing 1 Halaman PDF (https://github.com/azharzuhro12/tes-praktik-msi/raw/main/bukti/A4/A4-B01-briefing.pdf)
+- A4-S01: Diagram Alur Akses & Persetujuan (https://github.com/azharzuhro12/tes-praktik-msi/blob/main/bukti/A4/A4-S01-alur-akses-dan-persetujuan.md)
+- A4-U01: Hasil Verifikasi Otomatis Isi Briefing (https://github.com/azharzuhro12/tes-praktik-msi/blob/main/bukti/A4/A4-U01-hasil-uji.txt)
+```
+
+---
+
+### A5 — Jurnalistik Data dan Tata Letak 1 Halaman (SIMULASI)
+**Pertanyaan:** Buat artikel 250–350 kata dan tata letak 1 halaman siap cetak/PDF...*  
+**Jawaban untuk di-copy-paste:**
+```text
+RINGKASAN ARTIKEL & INTEGRITAS DATA:
+- Panjang Teks: Tepat 260 kata (memenuhi rentang wajib 250–350 kata).
+- Kepatuhan Fakta & Etika Jurnalistik: Menggunakan judul netral "Simulasi Otomasi Rekap Bulanan Pangkas Waktu Kerja Divisi Operasional". Hanya mengutip nama dan pernyataan narasumber berizin (Rani). Tidak mengarang jabatan fiktif, tidak mengklaim laba/pendapatan, dan mencantumkan catatan bahwa efisiensi belum diaudit oleh pihak independen.
+- Verifikasi Rumus: Efisiensi 25% dihitung secara matematis dari formula ((120 menit - 90 menit) / 120 menit) * 100%.
+
+DESAIN TATA LETAK & PERAN AI:
+- Tata Letak 1 Halaman: Didesain dalam tata letak editorial modern 2 kolom, dilengkapi elemen visual penarik (pull-quote kutipan Rani), infografis grafik batang perbandingan waktu proses (120 vs 90 menit) dengan label "Data Simulasi Internal", serta boxout metodologi perhitungan efisiensi.
+- Peran AI & Koreksi: AI digunakan untuk drafting awal dan pembuatan visual chart; koreksi ketat manual dilakukan untuk memangkas klaim berlebihan dan menjaga batas ketat kata serta kepatuhan etika data.
+- Keterbatasan: File PDF dihasilkan dari pipeline HTML-to-PDF headless Chromium; belum melalui proses prepress proofing (separasi warna CMYK dan margin bleed cetak percetakan).
+
+ID & TAUTAN BUKTI:
+- A5-N01: Naskah Artikel Lengkap (https://github.com/azharzuhro12/tes-praktik-msi/blob/main/bukti/A5/A5-N01-artikel.md)
+- A5-L01: Berkas Layout Majalah 1 Halaman PDF (https://github.com/azharzuhro12/tes-praktik-msi/raw/main/bukti/A5/A5-L01-layout.pdf)
+- A5-U01: Log Uji Otomatis Jumlah Kata & Integritas Klaim (https://github.com/azharzuhro12/tes-praktik-msi/blob/main/bukti/A5/A5-U01-hasil-uji.txt)
+```
+
+---
+
+### A6 — Alur CRM, Komunikasi Prospek, dan Penjadwalan Wawancara (SIMULASI)
+**Pertanyaan:** 10 prospek fiktif; catat pipeline, riwayat kontak...*  
+**Jawaban untuk di-copy-paste:**
+```text
+RINGKASAN & STRUKTUR PIPELINE:
+Mengelola 10 entitas prospek fiktif (P01–P10) lintas 4 sektor industri dengan pembagian merata 2 Account Executive (AE A: 5 akun, AE B: 5 akun).
+- Distribusi Tahapan: Baru (3), Kualifikasi (3), Follow-up (3), Penawaran Draf (1).
+- Manajemen Integritas Kebutuhan: Seluruh kebutuhan awal ditandai secara transparan "Kebutuhan Awal (Belum Terverifikasi)" sampai dilakukan asesmen resmi.
+- Aturan Penawaran Ketat (Human-in-the-Loop): Draf penawaran dari modul AI berstatus "Menunggu Persetujuan". Sistem secara ketat menolak pembuatan draf penawaran komersial jika kebutuhan prospek belum memiliki bukti verifikasi. Draf hanya dapat disetujui oleh Manajer Penjualan.
+- Hak Akses Peran: AE terisolasi hanya dapat menyunting prospek miliknya; Manajer memiliki hak penuh menyetujui draf dan melihat seluruh pipeline.
+
+PENGUJIAN & DEDUPLIKASI:
+1. Uji Deduplikasi P03: Penginputan ulang entitas PT Surya Bahari Energi (P03) ditolak oleh sistem dan data lama dipertahankan (jumlah prospek tetap 10).
+2. Penjadwalan Wawancara P03: Tanggal tindak lanjut tercatat rapi pada tanggal simulasi 5 November 2026.
+3. Uji Ketahanan Gagal & Coba Ulang: Kegagalan simpan sebelum/sesudah transaksi tertangani dengan aman tanpa menduplikasi record.
+
+KETERBATASAN:
+Asisten draf penawaran menggunakan generator berbasis aturan logika bisnis dan template variabel, belum terkoneksi ke LLM eksternal.
+
+ID & TAUTAN BUKTI:
+- A6-D01: Demo Web CRM Interaktif (https://azharzuhro12.github.io/tes-praktik-msi/A6-crm/)
+- A6-U01: Log Uji Otomatis 10/10 Lulus (https://github.com/azharzuhro12/tes-praktik-msi/blob/main/bukti/A6/A6-U01-hasil-uji.txt)
+- A6-S01: Screenshot Pipeline, Deduplikasi, dan Approval Manajer di folder bukti/A6/
+```
+
+---
+
+### A7 — Tautan Laporan Lengkap
+**Pertanyaan:** Unggah berkas laporan final atau masukkan tautan Google Drive/repositori yang berisi laporan lengkap...*  
+**Jawaban untuk di-copy-paste:**
+```text
+Laporan Lengkap dan Seluruh Berkas Bukti Penilaian:
+1. Berkas Laporan PDF Siap Cetak (AzharZuhro_TesPraktik_MSI.pdf):
+https://github.com/azharzuhro12/tes-praktik-msi/raw/main/AzharZuhro_TesPraktik_MSI.pdf
+
+2. Repositori Utama Proyek & Dokumentasi (GitHub):
+https://github.com/azharzuhro12/tes-praktik-msi
+
+3. Folder Arsip Bukti Terlabel Lengkap (bukti/A1–bukti/A6):
+https://github.com/azharzuhro12/tes-praktik-msi/tree/main/bukti
+
+4. Dokumen Laporan Lengkap Versi Markdown:
+https://github.com/azharzuhro12/tes-praktik-msi/blob/main/AzharZuhro_TesPraktik_MSI.md
+
+(Seluruh tautan bersifat publik dan dapat diakses/diunduh langsung oleh tim penilai tanpa memerlukan izin kredensial atau akses produksi).
+```
+
+---
+
+### A8 — Tautan Demo / Hasil Solusi Utama
+**Pertanyaan:** Masukkan tautan demo/hasil untuk solusi utama yang Anda pilih di A0...*  
+**Jawaban untuk di-copy-paste:**
+```text
+KODE SOLUSI UTAMA: A3 (Aplikasi Web Penilaian Awards)
+ID BUKTI: A3-D01, A3-U01, A3-S01
+
+TAUTAN EVALUASI SOLUSI UTAMA:
+1. Video Rekaman Layar Kandidat (Demo.webm, durasi 4m15s):
+https://github.com/azharzuhro12/tes-praktik-msi/raw/main/bukti/A3/Demo.webm
+
+2. Aplikasi Web Live Demo Interaktif (GitHub Pages):
+https://azharzuhro12.github.io/tes-praktik-msi/A3-penilaian-awards/
+
+3. Catatan Akses Aman:
+Aplikasi web berjalan penuh di sisi klien tanpa meminta login kredensial produksi dan tidak mengandung data rahasia. Penilai juga dapat menguji secara lokal tanpa ketergantungan rumit melalui perintah:
+python3 -m http.server 8080 --directory A3-penilaian-awards
+Lalu buka http://localhost:8080 di peramban web.
+```
+
+---
+
+### Bagian B: Kesiapan Bekerja dan Kompensasi
+
+#### B1 — Kesiapan Penempatan dan Pola Kerja
+**Pertanyaan:** Konfirmasi kesiapan bekerja purnawaktu (full-time), penempatan kerja di Jakarta Selatan, dan pola kerja koordinasi langsung dengan CEO.*  
+**Jawaban untuk di-copy-paste:**
+```text
+Bersedia penuh. Saya siap bekerja secara purnawaktu (full-time) dengan penempatan on-site di Jakarta Selatan, serta siap berkoordinasi intensif dan bekerja secara langsung bersama CEO MSI Group dalam mengawal implementasi inisiatif AI dan otomasi perusahaan.
+```
+
+#### B2 — Ekspektasi Gaji
+**Pertanyaan:** Berapa ekspektasi gaji bulanan yang Anda harapkan? Jelaskan dasar perhitungan Anda (misal: gross, nett/THP, atau komponen lain).*  
+**Jawaban untuk di-copy-paste:**
+```text
+Rp6.000.000 / bulan (Take Home Pay / Nett).
+Dasar pertimbangan: Angka ini merefleksikan nilai pasar profesional yang seimbang untuk peran spesialis implementasi AI & otomasi (mencakup kapabilitas end-to-end: rekayasa logika algoritma, integrasi sistem, automasi alur kerja, hingga deployment). Saya terbuka untuk mendiskusikan penyesuaian bila terdapat struktur komponen tunjangan operasional, kesehatan, atau evaluasi berkala berbasis kinerja (KPI).
+```
+
+#### B3 — Batas Kompensasi Minimum
+**Pertanyaan:** Berapa batas kompensasi bulanan terendah yang masih dapat Anda terima jika ada pertimbangan lain dalam paket penawaran?*  
+**Jawaban untuk di-copy-paste:**
+```text
+Rp5.500.000 / bulan (Take Home Pay / Nett).
+Batas minimum ini dapat saya terima dengan catatan terdapat kejelasan jenjang karier, peluang evaluasi peninjauan gaji pasca-probation yang terukur, serta dukungan fasilitas kerja/peralatan yang menunjang operasional otomasi secara optimal.
+```
+
+#### B4 — Waktu Mulai Bekerja
+**Pertanyaan:** Kapan Anda dapat mulai bekerja secara efektif jika dinyatakan lolos seleksi?*  
+**Jawaban untuk di-copy-paste:**
+```text
+Segera (Immediate / kurang dari 1 minggu setelah penawaran kerja resmi dan kesepakatan kontrak diselesaikan). Saat ini saya tidak memiliki ikatan kontrak aktif atau kewajiban masa notice period di perusahaan lain.
+```
+
+#### B5 — Catatan Tambahan Kesiapan / Kompensasi
+**Pertanyaan:** Apakah ada kondisi khusus atau catatan yang perlu kami ketahui terkait kesiapan bekerja atau kompensasi?*  
+**Jawaban untuk di-copy-paste:**
+```text
+Tidak ada kendala kesehatan atau mobilitas operasional. Saya sangat antusias untuk segera berkontribusi dalam memetakan bottleneck operasional di unit-unit bisnis MSI Group, membangun pipeline otomasi internal yang efisien, serta mengeksekusi integrasi AI yang berorientasi pada hasil nyata perusahaan.
+```
+
+---
+
+### Bagian C: Portofolio Proyek AI Terdahulu
+
+#### C1 — Proyek AI 1
+**Pertanyaan:** Proyek AI 1 — Nama proyek, peran, deskripsi singkat, tautan bukti/repo, dan keunggulan/hasil nyata.*  
+**Jawaban untuk di-copy-paste:**
+```text
+Nama Proyek: BizAssist-AI (Intelligent Business Support & Customer Service Agent)
+Peran: AI & Full-Stack Developer (Solo / Lead Developer)
+Deskripsi: Sistem asisten percakapan cerdas untuk otomatisasi layanan pelanggan dan penanganan inquiry bisnis berbasis RAG (Retrieval-Augmented Generation), dilengkapi mekanisme penangkapan lead dan antrean eskalasi manusia (Human-in-the-Loop).
+Tautan Repositori / Bukti: https://github.com/azharzuhro12/BizAssist-AI
+Keunggulan & Hasil:
+1. Menurunkan response time inquiry pelanggan secara signifikan melalui pencarian semantik dokumen knowledge base.
+2. Meminimalisir halusinasi AI dengan sistem sitasi rujukan sumber dokumen yang terverifikasi.
+3. Dilengkapi modul dashboard pemantauan tiket layanan dan integrasi webhook untuk notifikasi agen operasional.
+```
+
+#### C2 — Proyek AI 2
+**Pertanyaan:** Proyek AI 2 — Nama proyek, peran, deskripsi singkat, tautan bukti/repo, dan keunggulan/hasil nyata.*  
+**Jawaban untuk di-copy-paste:**
+```text
+Nama Proyek: catat-ai (Natural Language Financial & Transaction Logger)
+Peran: AI Software Engineer
+Deskripsi: Aplikasi otomasi pencatatan transaksi finansial yang memanfaatkan pemrosesan bahasa alami (NLU/NLP) untuk mengekstrak entitas nominal, kategori pengeluaran/pemasukan, dan tanggal transaksi secara instan dari input teks percakapan bebas.
+Tautan Repositori / Bukti: https://github.com/azharzuhro12/catat-ai
+Keunggulan & Hasil:
+1. Memangkas proses pencatatan manual dari pengisian formulir multi-kolom menjadi input single-prompt natural.
+2. Akurasi pengenalan intent dan ekstraksi entitas keuangan lokal (Bahasa Indonesia) yang tinggi.
+3. Struktur data transaksi otomatis tersinkronisasi ke basis data analitik siap saji untuk pelaporan periodik.
+```
+
+#### C3 — Proyek AI 3
+**Pertanyaan:** Proyek AI 3 — Nama proyek, peran, deskripsi singkat, tautan bukti/repo, dan keunggulan/hasil nyata.*  
+**Jawaban untuk di-copy-paste:**
+```text
+Nama Proyek: Workflow Automation & Event-Driven Integration (n8n Enterprise Automation Pipeline)
+Peran: Automation & Integration Specialist
+Deskripsi: Perancangan arsitektur alur kerja otomasi enterprise berbasis open-source orchestrator (n8n) untuk mengintegrasikan berbagai aplikasi SaaS, sinkronisasi webhook database internal, pembersihan data otomatis, dan distribusi laporan notifikasi tim.
+Tautan Repositori / Bukti: https://github.com/azharzuhro12/n8n
+Keunggulan & Hasil:
+1. Mengotomatiskan sinkronisasi data antar-sistem tanpa intervensi manual berulang (zero-touch synchronization).
+2. Memiliki arsitektur penanganan eror yang tangguh (error-trigger workflows, retry logic, dan logging notifikasi kegagalan secara real-time).
+3. Mengurangi beban kerja administratif berulang pada tim operasional hingga puluhan jam per bulan.
+```
+
+#### C4 — Ringkasan Keunggulan Portofolio
+**Pertanyaan:** Dari proyek-proyek yang Anda cantumkan di atas, apa kompetensi unik atau pendekatan terbaik yang Anda terapkan dan relevan untuk MSI Group?*  
+**Jawaban untuk di-copy-paste:**
+```text
+Kompetensi unik saya terletak pada integrasi menyeluruh antara "Rekayasa Otomasi yang Pragmatis" dan "Prinsip Human-in-the-Loop yang Terukur":
+1. Kepatuhan Sistem & Pencegahan Risiko: Dalam setiap solusi AI yang saya bangun (seperti terlihat pada studi kasus A1, A3, dan A6), AI tidak pernah dibiarkan mengeksekusi tindakan berisiko tinggi tanpa persetujuan manusia. Mekanisme deduplikasi, validasi batas nilai, dan fallback retry selalu diintegrasikan di tingkat arsitektur dasar.
+2. Efisiensi Berorientasi Dampak Nyata: Saya selalu memfokuskan otomasi pada titik friksi terbesar (bottleneck berulang) yang secara langsung memangkas waktu kerja dan menekan tingkat eror, bukan sekadar menerapkan AI demi tren teknologi.
+3. Keterlacakan & Transparansi Data (Auditability): Setiap keluaran sistem selalu dilengkapi jejak audit (audit trail), pemisahan tegas antara fakta sumber vs estimasi, dan kemudahan bagi staf operasional non-teknis untuk mengawasi sistem.
+```
