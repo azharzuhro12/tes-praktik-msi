@@ -324,46 +324,49 @@ Tidak ada kendala sama sekali. Kondisi kesehatan prima, tidak memiliki ikatan ko
 
 ### Bagian C: Portofolio Proyek AI Terdahulu
 
-#### C1 — Proyek AI 1
-**Pertanyaan:** Proyek AI 1 — Nama proyek, peran, deskripsi singkat, tautan bukti/repo, dan keunggulan/hasil nyata.*  
+#### C1 — Portofolio 1–3 Proyek AI Terdahulu
+**Pertanyaan:** Portofolio 1–3 program/proyek/solusi/aplikasi yang pernah dibuat menggunakan AI. Ulangi untuk tiap proyek: ID/nama/periode; masalah dan pengguna; fitur; teknologi/integrasi; penggunaan AI untuk membangun, sebagai fitur, atau keduanya; peran pribadi vs tim/template; status penerapan; pengujian/deployment/dokumentasi/pemeliharaan; kegagalan/keterbatasan; relevansi enam tugas MSI.*  
 **Jawaban untuk di-copy-paste:**
 ```text
-Nama Proyek: BizAssist-AI (Intelligent Business Support & Customer Service Agent)
-Peran: AI & Full-Stack Developer (Solo / Lead Developer)
-Deskripsi: Sistem asisten percakapan cerdas untuk otomatisasi layanan pelanggan dan penanganan inquiry bisnis berbasis RAG (Retrieval-Augmented Generation), dilengkapi mekanisme penangkapan lead dan antrean eskalasi manusia (Human-in-the-Loop).
-Tautan Repositori / Bukti: https://github.com/azharzuhro12/BizAssist-AI
-Keunggulan & Hasil:
-1. Menurunkan response time inquiry pelanggan secara signifikan melalui pencarian semantik dokumen knowledge base.
-2. Meminimalisir halusinasi AI dengan sistem sitasi rujukan sumber dokumen yang terverifikasi.
-3. Dilengkapi modul dashboard pemantauan tiket layanan dan integrasi webhook untuk notifikasi agen operasional.
-```
+PROYEK 1: BizAssist-AI (Intelligent Business Support & Customer Service Agent)
+- Periode: Oktober 2026 (Proyek Mandiri) | Repositori: https://github.com/azharzuhro12/BizAssist-AI
+- Masalah & Pengguna: Pengetahuan operasional UMKM tercecer di spreadsheet/chat sehingga staf lambat merespons inquiry. Pengguna: Staf CS & operasional UMKM.
+- Fitur: Chat web responsif, kontinuitas percakapan (conversation_id), pembatasan ketat hanya menjawab dari dokumen FAQ tanpa mengarang harga/stok, validasi batas input (2.000 karakter), dan mekanisme coba ulang (retry) saat jaringan putus.
+- Teknologi & Integrasi: Python (FastAPI, Pydantic v2, HTTPX async), Dify Chatflow (Knowledge Retrieval/RAG), Google Gemini, HTML5/CSS3/Vanilla JS, pytest.
+- Penggunaan AI: Keduanya (AI sebagai fitur inti RAG & asisten coding pengembangan).
+- Peran Pribadi: Solo Developer (merancang proxy backend keamanan API key, menyusun knowledge base, membangun UI, dan menulis unit test).
+- Status Penerapan: Prototipe fungsional teruji offline lokal.
+- Pengujian & Dokumentasi: Suite uji pytest otomatis (test_api.py, test_security.py, test_frontend.py), dokumentasi arsitektur dan screenshot lengkap di repo.
+- Keterbatasan: Belum memiliki autentikasi multi-tenant produksi dan database PostgreSQL persisten.
+- Relevansi Tugas MSI: Sangat relevan dengan A1 (Agent layanan berbasis KB dengan sitasi dan fallback staf).
 
-#### C2 — Proyek AI 2
-**Pertanyaan:** Proyek AI 2 — Nama proyek, peran, deskripsi singkat, tautan bukti/repo, dan keunggulan/hasil nyata.*  
-**Jawaban untuk di-copy-paste:**
-```text
-Nama Proyek: catat-ai (Natural Language Financial & Transaction Logger)
-Peran: AI Software Engineer
-Deskripsi: Aplikasi otomasi pencatatan transaksi finansial yang memanfaatkan pemrosesan bahasa alami (NLU/NLP) untuk mengekstrak entitas nominal, kategori pengeluaran/pemasukan, dan tanggal transaksi secara instan dari input teks percakapan bebas.
-Tautan Repositori / Bukti: https://github.com/azharzuhro12/catat-ai
-Keunggulan & Hasil:
-1. Memangkas proses pencatatan manual dari pengisian formulir multi-kolom menjadi input single-prompt natural.
-2. Akurasi pengenalan intent dan ekstraksi entitas keuangan lokal (Bahasa Indonesia) yang tinggi.
-3. Struktur data transaksi otomatis tersinkronisasi ke basis data analitik siap saji untuk pelaporan periodik.
-```
+---
 
-#### C3 — Proyek AI 3
-**Pertanyaan:** Proyek AI 3 — Nama proyek, peran, deskripsi singkat, tautan bukti/repo, dan keunggulan/hasil nyata.*  
-**Jawaban untuk di-copy-paste:**
-```text
-Nama Proyek: Workflow Automation & Event-Driven Integration (n8n Enterprise Automation Pipeline)
-Peran: Automation & Integration Specialist
-Deskripsi: Perancangan arsitektur alur kerja otomasi enterprise berbasis open-source orchestrator (n8n) untuk mengintegrasikan berbagai aplikasi SaaS, sinkronisasi webhook database internal, pembersihan data otomatis, dan distribusi laporan notifikasi tim.
-Tautan Repositori / Bukti: https://github.com/azharzuhro12/n8n
-Keunggulan & Hasil:
-1. Mengotomatiskan sinkronisasi data antar-sistem tanpa intervensi manual berulang (zero-touch synchronization).
-2. Memiliki arsitektur penanganan eror yang tangguh (error-trigger workflows, retry logic, dan logging notifikasi kegagalan secara real-time).
-3. Mengurangi beban kerja administratif berulang pada tim operasional hingga puluhan jam per bulan.
+PROYEK 2: catat-ai (Natural Language Financial & Transaction Logger)
+- Periode: Oktober 2026 (Proyek Mandiri) | Repositori: https://github.com/azharzuhro12/catat-ai | Live App: https://catat-ai-azhars-projects-da34b643.vercel.app
+- Masalah & Pengguna: Pelaku usaha mikro kesulitan mencatat kasbon/transaksi harian ke pembukuan formal. Pengguna: Pelaku UMKM & pedagang.
+- Fitur: Input transaksi via bahasa percakapan sehari-hari, input suara (Whisper audio transcription), scan struk belanja (multimodal vision), manajemen piutang, dashboard analitik, dan AI business insight.
+- Teknologi & Integrasi: Next.js 14 (TypeScript, Tailwind CSS, Recharts), FastAPI (Python), Groq (LLM & Whisper), Supabase (PostgreSQL), Vercel.
+- Penggunaan AI: Keduanya (AI fitur inti ekstraksi entitas keuangan NLU multimodal & asisten coding).
+- Peran Pribadi: Solo Developer (perancangan skema database Supabase, API FastAPI, prompt engineering ekstraksi terstruktur, dan deployment Vercel).
+- Status Penerapan: Live Deployment di Vercel (Production Prototype).
+- Pengujian & Dokumentasi: Endpoint health check (/health), skrip seed database demo (seed-demo.sql), dokumentasi endpoint REST API.
+- Keterbatasan: Masih menggunakan akun demo; OCR struk tulisan tangan yang sangat buram belum 100% optimal.
+- Relevansi Tugas MSI: Sangat relevan dengan A3 (validasi perhitungan, agregasi data, dashboard rekapitulasi) & A6 (pelacakan status catatan/tindak lanjut).
+
+---
+
+PROYEK 3: ResearchFlow-AI (Platform Riset AI Otonom & Sintesis Dokumen Terjadwal)
+- Periode: Oktober 2026 (Proyek Mandiri) | Repositori: https://github.com/azharzuhro12/ResearchFlow-AI
+- Masalah & Pengguna: Peneliti dan analis bisnis menghabiskan waktu berjam-jam membuka puluhan tab web, menyalin informasi, memverifikasi kebenaran klaim, dan menyusun laporan ber-sitasi. Pengguna: Tim riset pasar, analis bisnis, dan konsultan.
+- Fitur: Eksekusi riset otonom end-to-end (perencanaan query, pencarian web otomatis DuckDuckGo, ekstraksi teks & indeks vektor ChromaDB lokal, sintesis jawaban ber-grounding dengan sitasi inline tervalidasi sisi server), ekspor laporan Markdown + PDF, penjadwalan riset berkala (APScheduler cron), dan pengiriman ringkasan otomatis via Discord Webhook.
+- Teknologi & Integrasi: Python 3.14 (FastAPI), Next.js 16 (React, Tailwind CSS), ChromaDB (Vector Store lokal), GLM API (LLM planning & synthesis), SQLite (WAL mode transactional persistence), APScheduler, WeasyPrint (render PDF), Docker.
+- Penggunaan AI: Keduanya (AI sebagai fitur inti: perencanaan riset, embedding pencarian semantik, dan sintesis dokumen ber-grounding sitasi; serta AI asisten pembangunan kode).
+- Peran Pribadi: Solo Architect & Developer (merancang seluruh arsitektur pipeline riset, validasi sitasi server-side anti-halusinasi, skedul konkurensi SQLite WAL, UI dashboard, dan orkestrasi container Docker).
+- Status Penerapan: Selesai & Berjalan Penuh (Self-hosted / Dockerized Application).
+- Pengujian & Dokumentasi: Suite uji pytest komprehensif, validasi SSRF, pencegahan duplikasi eksekusi jadwal (max_instances=1 semaphore), dokumentasi arsitektur modular lengkap di README.
+- Keterbatasan: Penyimpanan vektor dan SQLite berjalan single-node lokal (belum multi-tenant cloud SaaS); scraping web publik bergantung pada responsivitas sumber.
+- Relevansi Tugas MSI: Sangat relevan dengan A4 (analisis dokumen & video menjadi executive briefing ber-sitasi fakta), A1 (grounding sumber KB ketat), dan A6 (penjadwalan background task & webhook notifikasi).
 ```
 
 #### C4 — Ringkasan Keunggulan Portofolio
