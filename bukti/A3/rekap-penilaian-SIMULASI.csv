@@ -1,0 +1,15 @@
+﻿SIMULASI TES PRAKTIK MSI Group — Rekap Penilaian Awards (data fiktif)
+Bobot;Strategi 40%;Implementasi 35%;Hasil 25%
+
+Peserta;Nama;Juri;Strategi;Implementasi;Hasil;Nilai juri;Catatan
+S01;PT Simulasi Peserta Satu;J1;4;3;4;73,0;
+S01;PT Simulasi Peserta Satu;J2;4;4;3;75,0;Bukti implementasi cukup jelas (catatan simulasi).
+S02;PT Simulasi Peserta Dua;J1;3;4;4;72,0;
+S02;PT Simulasi Peserta Dua;J2;4;3;4;73,0;
+S03;PT Simulasi Peserta Tiga;J1;5;4;3;83,0;
+S03;PT Simulasi Peserta Tiga;J2;4;4;4;80,0;
+
+Peserta;Nama;Kelengkapan;Status;Nilai perusahaan
+S01;PT Simulasi Peserta Satu;2/2;Lengkap;74,0
+S02;PT Simulasi Peserta Dua;2/2;Lengkap;72,5
+S03;PT Simulasi Peserta Tiga;2/2;Lengkap;81,5

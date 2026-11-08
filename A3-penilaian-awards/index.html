@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Penilaian Awards — SIMULASI MSI Group (A3)</title>
+  <link rel="icon" href="data:," />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="sim-banner">SIMULASI TES PRAKTIK MSI Group — seluruh peserta, juri, dan skor adalah data fiktif</div>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">★</span>
+      <div>
+        <h1>Aplikasi Penilaian Awards</h1>
+        <p class="sub">A3 · input nilai → validasi → perhitungan → rekap → ekspor</p>
+      </div>
+    </div>
+    <div class="role-box">
+      <label for="role">Masuk sebagai</label>
+      <select id="role">
+        <option value="admin">Admin</option>
+        <option value="J1">Juri J1</option>
+        <option value="J2">Juri J2</option>
+      </select>
+      <small>Pemilih peran untuk demo — <b>bukan autentikasi/keamanan produksi</b>.</small>
+    </div>
+  </header>
+
+  <div class="devbar">
+    <label class="switch"><input type="checkbox" id="simFail" /> Simulasikan penyimpanan gagal (1× simpan berikutnya)</label>
+    <span id="storageInfo" class="muted"></span>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+  <main>
+    <!-- ================= ADMIN ================= -->
+    <section id="adminView" hidden>
+      <nav class="tabs" role="tablist">
+        <button class="tab active" data-tab="dash">Dashboard &amp; Rekap</button>
+        <button class="tab" data-tab="weights">Kriteria &amp; Bobot</button>
+        <button class="tab" data-tab="participants">Peserta &amp; Juri</button>
+        <button class="tab" data-tab="export">Ekspor Laporan</button>
+        <button class="tab" data-tab="audit">Jejak Perubahan</button>
+      </nav>
+
+      <div class="panel" id="tab-dash">
+        <div class="cards" id="summaryCards"></div>
+        <h2>Rekap Nilai Perusahaan</h2>
+        <p class="muted" id="formulaText"></p>
+        <div class="table-wrap"><table id="recapTable" class="data"></table></div>
+        <h2>Rincian per Juri</h2>
+        <div class="table-wrap"><table id="detailTable" class="data"></table></div>
+        <p class="note">Nilai per juri dihitung dari skor mentah; nilai perusahaan = rata-rata nilai juri, dibulatkan satu kali ke 1 desimal. Isian yang kosong berstatus <b>Belum lengkap</b> (tidak dihitung nol).</p>
+      </div>
+
+      <div class="panel" id="tab-weights" hidden>
+        <h2>Kriteria &amp; Bobot</h2>
+        <p class="muted">Total bobot wajib tepat 100%. Perubahan bobot langsung menghitung ulang seluruh rekap.</p>
+        <form id="weightsForm" class="weights"></form>
+        <div class="actions">
+          <button id="saveWeights" class="btn primary">Simpan bobot</button>
+          <button id="preset503020" class="btn" type="button">Isi contoh 50/30/20</button>
+          <button id="preset403525" class="btn" type="button">Kembalikan 40/35/25</button>
+        </div>
+        <p id="weightsMsg" class="msg"></p>
+      </div>
+
+      <div class="panel" id="tab-participants" hidden>
+        <h2>Peserta</h2>
+        <div class="table-wrap"><table id="participantTable" class="data"></table></div>
+        <form id="addParticipantForm" class="inline-form">
+          <input id="newPid" placeholder="ID (mis. S04)" maxlength="10" />
+          <input id="newPname" placeholder="Nama perusahaan fiktif" maxlength="80" />
+          <button class="btn primary" type="submit">Tambah peserta</button>
+        </form>
+        <p id="participantMsg" class="msg"></p>
+        <h2>Juri</h2>
+        <div class="table-wrap"><table id="juryTable" class="data"></table></div>
+        <form id="addJuryForm" class="inline-form">
+          <input id="newJid" placeholder="ID (mis. J3)" maxlength="10" />
+          <input id="newJname" placeholder="Nama juri (simulasi)" maxlength="80" />
+          <button class="btn primary" type="submit">Tambah juri</button>
+        </form>
+        <p id="juryMsg" class="msg"></p>
+        <div class="actions">
+          <button id="resetSample" class="btn danger" type="button">Muat ulang data contoh naskah</button>
+        </div>
+      </div>
+
+      <div class="panel" id="tab-export" hidden>
+        <h2>Ekspor Laporan</h2>
+        <p class="muted">CSV (pemisah titik koma) dibangun dari fungsi rekap yang sama dengan dashboard.</p>
+        <div class="actions">
+          <button id="downloadCsv" class="btn primary">Unduh CSV</button>
+          <button id="verifyExport" class="btn">Periksa: ekspor = dashboard?</button>
+          <button id="printReport" class="btn">Cetak / simpan PDF</button>
+        </div>
+        <p id="verifyMsg" class="msg"></p>
+        <pre id="csvPreview" class="csv"></pre>
+      </div>
+
+      <div class="panel" id="tab-audit" hidden>
+        <h2>Jejak Perubahan</h2>
+        <div class="table-wrap"><table id="auditTable" class="data"></table></div>
+      </div>
+    </section>
+
+    <!-- ================= JURI ================= -->
+    <section id="juryView" hidden>
+      <h2 id="juryTitle">Lembar Penilaian</h2>
+      <p class="muted">Isi skor 0–5 untuk setiap kriteria. Anda hanya dapat mengubah penilaian Anda sendiri. Kosongkan bila belum menilai — status menjadi <b>Belum lengkap</b>.</p>
+      <div id="juryCards" class="jury-cards"></div>
+    </section>
+  </main>
+
+  <footer>Prototipe lokal (HTML/CSS/JS + localStorage). Tidak ada server, autentikasi, atau data nyata. © Simulasi tes praktik.</footer>
+
+  <script src="js/scoring.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

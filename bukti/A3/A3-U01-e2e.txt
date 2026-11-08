@@ -1,0 +1,30 @@
+A3 — Hasil uji end-to-end di peramban (Chrome headless)
+Waktu: 2026-11-07T23:31:11.903Z
+Lulus 12/12
+
+LULUS | Rekap awal S01=74,0 S02=72,5 S03=81,5 | {"S01":"74,0","S02":"72,5","S03":"81,5"}
+[step-01.png] Admin membuka dashboard — data contoh naskah, rekap S01 74,0 · S02 72,5 · S03 81,5
+[step-02.png] Rincian per juri sesuai tabel naskah: 73,0 / 75,0 / 72,0 / 73,0 / 83,0 / 80,0
+LULUS | Nilai per juri tampil 73,0 75,0 72,0 73,0 83,0 80,0 | 73,0 75,0 72,0 73,0 83,0 80,0
+[step-03.png] Admin mengubah bobot menjadi 50% / 30% / 20% (total 100%)
+LULUS | Bobot 50/30/20 -> S01 J1 = 74,0 | 74,0
+[step-04.png] Rekap dihitung ulang otomatis — S01 J1 menjadi 74,0
+LULUS | Total bobot 110% ditolak | Total bobot 110% ditolak: total harus tepat 100%.
+[step-05.png] Total bobot 110% ditolak — bobot lama tetap berlaku
+LULUS | Bobot kembali 40/35/25 -> rekap kembali 74,0/72,5/81,5 | {"S01":"74,0","S02":"72,5","S03":"81,5"}
+[step-06.png] Masuk sebagai Juri J1 (pemilih peran simulasi) — hanya lembar milik J1 yang tampil
+LULUS | Skor 6 ditolak dengan pesan rentang 0–5 | Skor 6 ditolak: skor harus pada rentang 0–5.
+[step-07.png] Skor 6 ditolak: "skor harus pada rentang 0–5" — data tidak disimpan
+[step-08.png] Juri J2 mengosongkan isian S01 lalu menyimpan → status Belum lengkap
+LULUS | J2 kosong -> S01 Belum lengkap, nilai "—" (bukan nol) | final=—; belum / Belum lengkap
+[step-09.png] Dashboard admin: S01 Belum lengkap (1/2), nilai tidak dihitung sebagai nol
+LULUS | Gagal simpan -> pesan gagal + tombol Coba ulang, bukan "berhasil" | Penyimpanan gagal. Data BELUM tersimpan; silakan coba ulang. (SIMULASI: penyimpanan gagal (koneksi/disk tidak tersedia).)Coba ulang
+LULUS | Setelah gagal simpan, status S01 tetap Belum lengkap | Belum lengkap
+[step-10.png] Simulasi penyimpanan gagal: muncul pesan "Data BELUM tersimpan" + tombol Coba ulang; isian tidak hilang
+[step-11.png] Coba ulang berhasil — penilaian S01 Juri J2 tersimpan (Lengkap · 75,0)
+LULUS | Setelah refresh data tetap tersimpan, S01 kembali 74,0 | {"S01":"74,0","S02":"72,5","S03":"81,5"}
+[step-12.png] Halaman dimuat ulang — data tersimpan; S01 kembali Lengkap 74,0
+LULUS | Ekspor CSV = dashboard | COCOK — S01: dashboard 74,0 | ekspor 74,0 ✔ · S02: dashboard 72,5 | ekspor 72,5 ✔ · S03: dashboard 81,5 | ekspor 81,5 ✔
+[step-13.png] Ekspor: pemeriksaan otomatis "ekspor = dashboard" → COCOK; pratinjau CSV
+[step-14.png] Jejak perubahan: siapa mengubah apa (bobot, skor, gagal tidak tercatat sebagai sukses)
+LULUS | Tidak ada error JavaScript di konsol

@@ -1,0 +1,17 @@
+✔ U01 Sponsor: jawaban dari KB03, tanpa eskalasi (6.842764ms)
+✔ U02 Jaminan bintang 5: tidak menjanjikan, rujukan KB04, diteruskan ke staf (1.207374ms)
+✔ U03 Harga paket + tanggal wawancara: KB02 dan KB04, perlu staf (6.350464ms)
+✔ U04 Biaya pendaftaran: KB01 (0.462512ms)
+✔ U05 Di luar KB: tidak menebak, tanpa rujukan palsu, masuk antrean staf (2.135042ms)
+✔ U06 P03 dimasukkan dua kali: hanya satu prospek tersimpan (4.278077ms)
+✔ U07 Database gagal: tampil gagal + coba ulang, tanpa keberhasilan palsu (0.939942ms)
+✔ U08 Draf follow-up: Menunggu persetujuan, tidak bisa dikirim sebelum disetujui staf (1.82015ms)
+✔ U09 Prospek baru disimpan dengan kebutuhan "Belum terkonfirmasi" dan sumber (0.833248ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 188.329959

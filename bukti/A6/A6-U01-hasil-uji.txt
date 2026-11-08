@@ -1,0 +1,18 @@
+✔ U01 Dashboard awal: 10 prospek unik; Baru 3, Kualifikasi 3, Follow-up 3, Penawaran draf 1 (3.271297ms)
+✔ U02 Masukkan P03 lagi: total tetap 10, duplikasi ditandai (ID maupun nama) (3.143114ms)
+✔ U03 P03 dari agent A1 dirujuk ke prospek yang ada (aktivitas, bukan prospek baru) (1.751437ms)
+✔ U04 Contoh catatan P03: tindak lanjut 2026-11-05, pengingat dibuat, kebutuhan tetap Belum terkonfirmasi (1.405222ms)
+✔ U05 Draf AI: Menunggu persetujuan, tidak terkirim tanpa persetujuan manajer (3.583205ms)
+✔ U06 Minat awal tidak dianggap kebutuhan terkonfirmasi: Penawaran draf ditolak sampai dikonfirmasi dengan bukti (1.328287ms)
+✔ U07 Perubahan status tercatat pada histori (1.038367ms)
+✔ U08 Pemisahan hak akses: AE B tidak bisa mengubah prospek AE A (2.240737ms)
+✔ U09 Gagal sebelum tersimpan: pesan tampil, data tidak hilang, coba ulang menyimpan sekali (2.415036ms)
+✔ U10 Gagal SETELAH tersimpan (respons hilang): coba ulang tidak membuat duplikasi (1.012456ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 149.735101

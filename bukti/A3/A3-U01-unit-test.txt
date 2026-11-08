@@ -1,0 +1,20 @@
+✔ U01 Nilai per juri sesuai tabel naskah acuan (4.405294ms)
+✔ U02 Nilai perusahaan: S01 = 74,0; S02 = 72,5; S03 = 81,5 (1.180728ms)
+✔ U03 Skor 6 ditolak dengan pesan rentang 0–5 (juga -1, teks) (2.128116ms)
+✔ U04 Isian J2 kosong -> Belum lengkap, bukan nol dan bukan nilai final (1.948869ms)
+✔ U05 Bobot 50/30/20 -> dihitung ulang, S01 J1 = 74,0 (0.757281ms)
+✔ U06 Total bobot != 100% ditolak dan bobot lama tetap (0.728762ms)
+✔ U07 Ekspor CSV sama dengan dashboard (sumber angka tunggal) (0.883647ms)
+✔ U08 Penyimpanan gagal: tidak ada keberhasilan palsu, data tidak berubah, coba ulang berhasil (0.909264ms)
+✔ U09 Hak akses simulasi: juri hanya mengubah penilaiannya sendiri; bobot hanya admin (0.577864ms)
+✔ U10 Peserta duplikat ditolak; jejak audit tercatat (1.151898ms)
+✔ U11 Pembulatan 1 desimal tidak terpengaruh galat floating point (0.599426ms)
+✔ U12 Juri dapat ditambah dan dikurang; perhitungan menyesuaikan jumlah juri (3.002251ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 168.884541

@@ -1,0 +1,7 @@
+=== PENGUJIAN A5-U01: PEMERIKSAAN KLAIM & AKURASI JURNALISTIK ===
+✔ Uji 1: Rumus penghematan (120 - 90) ÷ 120 = 25% terverifikasi matematis
+✔ Uji 2: Bebas dari klaim palsu (laba, jabatan direktur fiktif, omzet tidak dilebih-lebihkan)
+✔ Uji 3: Fakta dasar (20 staf, 4 minggu) tercantum konsisten
+✔ Uji 4: Atribusi kutipan sesuai bahan acuan & mencantumkan syarat persetujuan editor
+
+SELURUH 4 PENGUJIAN A5-U01 LULUS 100%!
