@@ -59,6 +59,5 @@ node tools/test-a5.js
 ---
 
 ## 📄 Dokumen Laporan Lengkap
-- Dokumen Laporan Eksekutif: [`AzharZuhro_TesPraktik_MSI.md`](./AzharZuhro_TesPraktik_MSI.md)
-- Dokumen PDF Siap Cetak: [`AzharZuhro_TesPraktik_MSI.pdf`](./AzharZuhro_TesPraktik_MSI.pdf)
-- Draf Isian Google Form: [`DRAF_JAWABAN_FORM.md`](./DRAF_JAWABAN_FORM.md)
+- Dokumen PDF Siap Cetak / Evaluasi: [`AzharZuhro_TesPraktik_MSI.pdf`](./AzharZuhro_TesPraktik_MSI.pdf)
+- Seluruh artefak bukti, video, dan pengujian per kasus dapat dilihat pada folder masing-masing (`/A1-agent-layanan` s.d. `/A6-crm` dan folder `/bukti`).
