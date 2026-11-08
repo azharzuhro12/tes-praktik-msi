@@ -127,3 +127,4 @@ html += '</body></html>';
   await browser.close();
   console.log('PDF rendered successfully:', outPdf);
 })();
+

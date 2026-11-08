@@ -11,3 +11,4 @@ Folder ini berisi naskah artikel jurnalistik 260 kata faktual dan tata letak edi
 - `make-a5-chart.py`: Skrip Python matplotlib pembuat grafik perbandingan.
 - `test-a5.js`: Skrip uji otomatis jumlah kata dan verifikasi integritas klaim.
 - `A5-U01-hasil-uji.txt`: Log hasil kelulusan uji otomatis.
+

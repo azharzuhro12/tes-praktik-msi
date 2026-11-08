@@ -9,3 +9,4 @@ Folder ini berisi seluruh aset, video final berformat 9:16 vertikal, subtitle, s
 - `A2-D01-metadata-youtube.md`: Draf judul, deskripsi, tag, dan bab timestamp YouTube/Podcast.
 - `narasi_synced.mp3`: Berkas rekaman suara voiceover AI neural (`id-ID-ArdiNeural`).
 - `make-a2-anim.py`: Skrip pemrograman prosedural (Python + Pillow + FFmpeg) yang merender 960 frame animasi 30 fps.
+

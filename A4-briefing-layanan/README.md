@@ -10,3 +10,4 @@ Folder ini berisi dokumen executive briefing 1 halaman padat berdasarkan analisi
 - `A4-S01-alur-akses-dan-persetujuan.md`: Diagram alur akses dokumen berizin dan review bertingkat human-in-the-loop.
 - `test-a4.js`: Skrip uji otomatis validasi kepatuhan fakta dan penanda timestamp.
 - `A4-U01-hasil-uji.txt`: Log hasil kelulusan pengujian otomatis.
+

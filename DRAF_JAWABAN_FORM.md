@@ -295,11 +295,29 @@ Batas minimum ini dapat saya terima dengan catatan terdapat kejelasan jenjang ka
 Segera (Immediate / kurang dari 1 minggu setelah penawaran kerja resmi dan kesepakatan kontrak diselesaikan). Saat ini saya tidak memiliki ikatan kontrak aktif atau kewajiban masa notice period di perusahaan lain.
 ```
 
-#### B5 — Catatan Tambahan Kesiapan / Kompensasi
-**Pertanyaan:** Apakah ada kondisi khusus atau catatan yang perlu kami ketahui terkait kesiapan bekerja atau kompensasi?*  
+#### B5 — Keunggulan Pribadi dan Kebutuhan Dukungan
+**Pertanyaan:** Jelaskan keunggulan dengan contoh/bukti, tugas MSI yang siap ditangani mandiri dan tugas yang memerlukan pendampingan. Jelaskan kendala relevan terhadap kesiapan kerja, jika ada*  
 **Jawaban untuk di-copy-paste:**
 ```text
-Tidak ada kendala kesehatan atau mobilitas operasional. Saya sangat antusias untuk segera berkontribusi dalam memetakan bottleneck operasional di unit-unit bisnis MSI Group, membangun pipeline otomasi internal yang efisien, serta mengeksekusi integrasi AI yang berorientasi pada hasil nyata perusahaan.
+1. KEUNGGULAN PRIBADI DENGAN CONTOH & BUKTI NYATA:
+- Rekayasa Otomasi & AI dari Hulu ke Hilir (End-to-End): Terbiasa merancang logika bisnis, backend/frontend, integrasi model AI/RAG, hingga pengujian otomatis (automated testing).
+  * Bukti di Tes Praktik: Pada A3, saya merancang perhitungan dinamis dengan validasi ketat 100% dan pengujian otomatis (12 unit test + 12 browser E2E test lulus). Pada A2, saya memprogram generator motion-graphics matematika (Python/FFmpeg) 30 fps yang tersinkronisasi audio.
+  * Bukti Portofolio: BizAssist-AI (FastAPI + Dify RAG), CatatAI (Next.js + FastAPI + Whisper/Groq live di Vercel), dan otomasi pipeline n8n dengan bot Telegram.
+- Integritas Sistem & Prinsip Human-in-the-Loop: Tidak pernah membiarkan AI bertindak tanpa kendali manusia pada alur kritis.
+  * Bukti di Tes Praktik: Pada A1 dan A6, draf penawaran/tindak lanjut berstatus wajib "Menunggu Persetujuan", isolasi outbox simulasi, serta penolakan duplikasi dan mekanisme retry saat database putus.
+
+2. TUGAS MSI YANG SIAP DITANGANI SECARA MANDIRI:
+- Pengembangan aplikasi web internal, dashboard interaktif, serta sistem scoring dan rekapitulasi data penjurian awards (studi kasus A3).
+- Pembangunan AI Agent berbasis Knowledge Base (KB) untuk penanganan layanan, pendaftaran, dan prospek awards dengan kepatuhan sumber ketat dan eskalasi staf (studi kasus A1).
+- Perancangan arsitektur CRM, pipeline prospek, automasi jadwal tindak lanjut, dan integrasi workflow n8n/webhook antar-aplikasi operasional MSI Group (studi kasus A6).
+- Produksi dan otomasi konten vertikal video/grafis terprogram (9:16) untuk kebutuhan sosial media podcast/awards (studi kasus A2).
+
+3. TUGAS YANG MEMERLUKAN PENDAMPINGAN / ARAHAN AWAL:
+- Standar editorial, tone-of-voice spesifik industri, dan format tata letak cetak fisik (prepress/CMYK/bleed) untuk media majalah MSI Group (studi kasus A5).
+- Penyelarasan metodologi perumusan hipotesis bisnis dan format standar executive briefing untuk klien korporasi MSI Institute (studi kasus A4) agar selaras dengan ekspektasi pimpinan dan konsultan senior.
+
+4. KENDALA RELEVAN TERHADAP KESIAPAN KERJA:
+Tidak ada kendala sama sekali. Kondisi kesehatan prima, tidak memiliki ikatan kontrak aktif dengan pihak lain, dan siap mendedikasikan 100% waktu serta energi secara purnawaktu (full-time on-site) di Jakarta Selatan untuk mendukung akselerasi otomatisasi MSI Group.
 ```
 
 ---
