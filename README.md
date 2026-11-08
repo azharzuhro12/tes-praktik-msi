@@ -59,5 +59,7 @@ node tools/test-a5.js
 ---
 
 ## 📄 Dokumen Laporan Lengkap
-- Dokumen PDF Siap Cetak / Evaluasi: [`AzharZuhro_TesPraktik_MSI.pdf`](./AzharZuhro_TesPraktik_MSI.pdf)
+- Dokumen Laporan Eksekutif (PDF Resmi): [`AzharZuhro_TesPraktik_MSI.pdf`](./AzharZuhro_TesPraktik_MSI.pdf)
+- Laporan Lengkap MSI (PDF): [`LAPORAN_LENGKAP_MSI.pdf`](./LAPORAN_LENGKAP_MSI.pdf)
+- Naskah Laporan Akhir A1–A6 (Markdown): [`LAPORAN_AKHIR_MSI_A1_A6.md`](./LAPORAN_AKHIR_MSI_A1_A6.md)
 - Seluruh artefak bukti, video, dan pengujian per kasus dapat dilihat pada folder masing-masing (`/A1-agent-layanan` s.d. `/A6-crm` dan folder `/bukti`).
